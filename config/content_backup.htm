@@ -1,21 +1,24 @@
 <h1>簡介</h1>
 <p><a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g1">產品協同設計課程第一組</a></p>
-<p><a href="https://cda-t1-g1.blogspot.com/">部落格</a></p><h1>組員</h1>
+<p><a href="https://cda-t1-g1.blogspot.com/">部落格</a></p>
+<h1>組員</h1>
 <p><a href="https://github.com/40623101">40623101</a> 王馨慧</p>
 <p><a href="https://github.com/40623108">40623108</a> 林郁涵</p>
 <p><a href="https://github.com/40623116">40623116</a> 楊子毅</p>
 <p><a href="https://github.com/40623117">40623117</a> 楊智傑</p>
-<p><a href="https://github.com/40623119">40623119</a> 歐宗偉</p>
+<p><a href="https://github.com/40623119">40623119</a> 歐宗韋</p>
 <p><a href="https://github.com/40623122">40623122</a> 蔡柄澤</p>
 <p><a href="https://github.com/40623129">40623129</a> 陳威誠</p>
 <p><a href="https://github.com/40623140">40623140</a> 韓希然</p>
-<p>40623157</p>
-<p><a href="https://github.com/40423158">40423158</a></p><h1>課程內容</h1>
+<p>40623157李昀霖</p>
+<p><a href="https://github.com/40423158">40423158</a></p>
+<h1>課程內容</h1>
 <p><span>使用可攜程式系統, 以及 </span><a href="https://github.com/chiamingyen/cmsimfly">CMSimfly</a><span><span> </span>與</span><a href="https://git-scm.com/download/win"><span> </span>portable Git</a><span><span> </span>管理各學員與分組的動態與靜態網際內容管理系統, 同時利用<span> </span></span><a href="https://www.onshape.com/">Onshape</a><span><span> </span>與<span> </span></span><a href="http://www.coppeliarobotics.com/">V-rep</a><span><span> </span>執行機電資整合產品開發, 當面臨各協同設計階段所遭遇問題時, 各學員可利用客製化程式加以解決.</span></p>
 <p><span></span></p>
 <p><span></span></p>
 <p><a href="http://mde.tw/cd2019/content/Introduction.html"><span>from </span>2019 Spring 協同產品設計實習</a></p>
-<p></p><h2>建立可攜系統</h2>
+<p></p>
+<h2>建立可攜系統</h2>
 <p>課程影片</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/uEq_GtkkPx8" width="560"></iframe> </p>
 <p>操作影片</p>
@@ -25,5 +28,15 @@
 <p>2.將解壓縮完的整個 <span>nodejs 資料夾放入可攜 data 資料夾中。<img alt="" height="808" src="/images/Y_nodejs.jpg" width="671"/></span></p>
 <p>3.以 <span>SciTE 編輯器編輯 start_cadlab.bat。</span></p>
 <p><span><img alt="" height="990" src="/images/start_bat.jpg" width="562"/></span></p>
-<p>4.</p>
-<p></p>
+<p>4.在 <span>SciTE 編輯器上輸入指令，指令如下 :</span></p>
+<p><span>ungit --launchBrowser=0 --launchCommand "C:\PROGRA~2\Google\Chrome\Application\chrome.exe  %%U"</span></p>
+<p>5.將上述指令存入 Y:\kungit.bat 批次檔案中。</p>
+<p><span><img alt="" height="533" src="/images/kungit_save.jpg" width="944"/></span></p>
+<p>6. 進入倉儲的資料夾後，<span>只要輸入 kungit 即可呼叫此一 ungit 指令執行。</span></p>
+<h3>ungit問題與解決</h3>
+<p>ungit無法確認身分，導致無法推送</p>
+<p><img alt="" height="385" src="/images/fail.png" width="800"/></p>
+<p><span>以 </span><span>SciTE 編輯器編輯 start_cadlab.bat<br/>把最後的home更改成home_cadlab，因為帳號在home_cadlab這個資料夾裡面</span></p>
+<p><span><img alt="" height="740" src="/images/change.png" width="576"/></span></p>
+<p><span></span>更改之後點擊stop.bat關閉，並重新打開，就可以正常上推資料了</p>
+<p><img alt="" height="385" src="/images/solved.png" width="800"/></p>
