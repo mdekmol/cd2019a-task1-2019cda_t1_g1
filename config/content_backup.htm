@@ -61,7 +61,16 @@
 <p>若要刪除commit，點擊藍色圓圈，點擊uncommit即可</p>
 <p><img alt="" height="937" src="/images/3.png" width="1920"/></p>
 <p></p>
-<h1>V-rep</h1>
+<h2>SSH Public Key</h2>
+<p><span>(一)關閉操作系統儲存 Github 帳號密碼設定</span></p>
+<p><span>1.使用指令「</span>git config --edit --system」，<span>帶出 vi 編輯器。</span></p>
+<p><span>2.編輯 git 指令所使用的系統設定(按鍵H,J,K,L對應控制左下上右)。</span></p>
+<p><span>3.按a進入編輯模式，</span>編輯模式最底下會顯示「-- INSERT --<span>」。</span></p>
+<p><span>4.按BACKSPACE刪除最後一行如下圖。</span></p>
+<p><span>5.刪除完按ESC鍵離開編輯模式。<br/></span></p>
+<p><span>6.輸入「:wq」存檔並關閉</span></p>
+<p><span>(二)建立 OpenSSH 格式的 Private 與 Public Keys</span></p>
+<p><span></span></p><h1>V-rep</h1>
 <p>持續更新中</p>
 <p></p>
 <p><img alt="" height="453" src="/images/task2.gif" width="800"/></p>
@@ -82,5 +91,8 @@
 <p>git commit -m "檔案名"</p>
 <p>git push</p>
 <p>mkdir 名稱 ：創建資料夾</p>
-<p></p>
-<p></p>
+<p><span style="color: #ff0000;">github版本回推</span></p>
+<p>1.git  reflog</p>
+<p>2.git reset  --hard 版本名稱(下圖)</p>
+<p><img alt="" height="648" src="/images/5465.png" width="1152"/></p>
+<p>3.git  push  -f </p>
