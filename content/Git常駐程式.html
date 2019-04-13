@@ -78,11 +78,27 @@ $(document).ready(doSearch);
 
 </ul>
 </confmenu></header>
-<div class='container'><nav><ul id='css3menu1' class='topmenu'><div class="tipue_search_group"><input style="width: 6vw;" type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="Press enter key to search" required></div><li><a href='簡介.html'>簡介</a><li><a href='組員.html'>組員</a><li><a href='課程內容.html'>課程內容</a><ul><li><a href='建立可攜系統.html'>建立可攜系統</a><li><a href='ungit-建立.html'>ungit-建立</a><ul><li><a href='更改帳號.html'>更改帳號</a><li><a href='ungit上推問題與解決.html'>ungit上推問題與解決</a><li><a href='ungit上傳資料.html'>ungit上傳資料</a></li></ul><li><a href='SSH Public Key.html'>SSH Public Key</a></li></ul><li><a href='V-rep.html'>V-rep</a><ul><li><a href='模擬影片.html'>模擬影片</a><li><a href='手足球圖檔.html'>手足球圖檔</a></li></ul><li><a href='個人操作影片.html'>個人操作影片</a><li><a href='git 手冊.html'>git 手冊</a><ul><li><a href='伺服器上的Git.html'>伺服器上的Git</a><ul><li><a href='通訊協定種類.html'>通訊協定種類</a><li><a href='在伺服器上佈署Git.html'>在伺服器上佈署Git</a><li><a href='產生個人的SSH公鑰.html'>產生個人的SSH公鑰</a><li><a href='伺服器的設定.html'>伺服器的設定</a><li><a href='Git常駐程式.html'>Git常駐程式</a></li></ul></nav><section><div id="tipue_search_content">更改帳號 << <a href='更改帳號.html'>Previous</a> <a href='ungit上傳資料.html'>Next</a> >> ungit上傳資料<br /><h1>ungit上推問題與解決</h1>
-<p>ungit無法確認身分，導致無法推送</p>
-<p><img alt="" height="385" src="./../images/fail.png" width="800"/></p>
-<p><span>以 </span><span>SciTE 編輯器編輯 start_cadlab.bat<br/>把最後的 home 更改成 home_cadlab ，因為帳號在 home_cadlab 這個資料夾裡面</span></p>
-<p><span><img alt="" height="740" src="./../images/change.png" width="576"/></span></p>
-<p><span></span>更改並儲存之後點擊 stop.bat 關閉，並重新打開，就可以正常上推資料了</p>
-<p><img alt="" height="385" src="./../images/solved.png" width="800"/></p>
-<br />更改帳號 << <a href='更改帳號.html'>Previous</a> <a href='ungit上傳資料.html'>Next</a> >> ungit上傳資料</div></section></div></body></html>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><div class="tipue_search_group"><input style="width: 6vw;" type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="Press enter key to search" required></div><li><a href='簡介.html'>簡介</a><li><a href='組員.html'>組員</a><li><a href='課程內容.html'>課程內容</a><ul><li><a href='建立可攜系統.html'>建立可攜系統</a><li><a href='ungit-建立.html'>ungit-建立</a><ul><li><a href='更改帳號.html'>更改帳號</a><li><a href='ungit上推問題與解決.html'>ungit上推問題與解決</a><li><a href='ungit上傳資料.html'>ungit上傳資料</a></li></ul><li><a href='SSH Public Key.html'>SSH Public Key</a></li></ul><li><a href='V-rep.html'>V-rep</a><ul><li><a href='模擬影片.html'>模擬影片</a><li><a href='手足球圖檔.html'>手足球圖檔</a></li></ul><li><a href='個人操作影片.html'>個人操作影片</a><li><a href='git 手冊.html'>git 手冊</a><ul><li><a href='伺服器上的Git.html'>伺服器上的Git</a><ul><li><a href='通訊協定種類.html'>通訊協定種類</a><li><a href='在伺服器上佈署Git.html'>在伺服器上佈署Git</a><li><a href='產生個人的SSH公鑰.html'>產生個人的SSH公鑰</a><li><a href='伺服器的設定.html'>伺服器的設定</a><li><a href='Git常駐程式.html'>Git常駐程式</a></li></ul></nav><section><div id="tipue_search_content">伺服器的設定 << <a href='伺服器的設定.html'>Previous</a> <br /><h1>Git常駐程式</h1>
+<p>如不想將大量的項目或人員都添加SSH密鑰時，以守護進程的方式運行下列指令:<br/>此方法雖然設置方便而快速，但因沒有密鑰的身分驗證，所以任何人都可以存取裡面的內容。多用於世界性的公開項目。</p>
+<p>$ git daemon --reuseaddr --base-path=/opt/git/ /opt/git/</p>
+<p><strong>--reuseaddr是允許服務器重新啟動而無需等待舊連接超時</strong></p>
+<p><strong>--base-path是允許人們克隆項目而不指定整個路徑</strong></p>
+<p>**最後的路徑需告訴Git守護程序在哪裡查找要導出的存儲庫**</p>
+<p>如果你正在運行防火牆，你還需要在你正在設置它的盒子上的端口9418處打一個洞。<br/>但建議將此守護程序作為具有存儲庫的唯讀權限的用戶運行。</p>
+<p>在Ubuntu計算機上，您可以使用Upstart的腳本，並在文件中放入腳本。</p>
+<p>**文件為/etc/init/local-git-daemon.conf**</p>
+<p>腳本:</p>
+<p>start on startup</p>
+<p>stop on shutdown</p>
+<p>exec /usr/bin/git daemon \</p>
+<p>--user=git --group=git \</p>
+<p>--reuseaddr \</p>
+<p>--base-path=/opt/git/ \</p>
+<p>/opt/git/</p>
+<p>respawn</p>
+<p>要在不重新啟動的情況下運行計算機時</p>
+<p>$ initctl start local-git-daemon</p>
+<p>允許未經身份驗證的用戶存取指定的儲存庫。</p>
+<p>$ cd /path/to/project.git</p>
+<p>$ touch git-daemon-export-ok</p>
+<p></p><br />伺服器的設定 << <a href='伺服器的設定.html'>Previous</a> </div></section></div></body></html>

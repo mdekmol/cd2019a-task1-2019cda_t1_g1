@@ -78,11 +78,18 @@ $(document).ready(doSearch);
 
 </ul>
 </confmenu></header>
-<div class='container'><nav><ul id='css3menu1' class='topmenu'><div class="tipue_search_group"><input style="width: 6vw;" type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="Press enter key to search" required></div><li><a href='簡介.html'>簡介</a><li><a href='組員.html'>組員</a><li><a href='課程內容.html'>課程內容</a><ul><li><a href='建立可攜系統.html'>建立可攜系統</a><li><a href='ungit-建立.html'>ungit-建立</a><ul><li><a href='更改帳號.html'>更改帳號</a><li><a href='ungit上推問題與解決.html'>ungit上推問題與解決</a><li><a href='ungit上傳資料.html'>ungit上傳資料</a></li></ul><li><a href='SSH Public Key.html'>SSH Public Key</a></li></ul><li><a href='V-rep.html'>V-rep</a><ul><li><a href='模擬影片.html'>模擬影片</a><li><a href='手足球圖檔.html'>手足球圖檔</a></li></ul><li><a href='個人操作影片.html'>個人操作影片</a><li><a href='git 手冊.html'>git 手冊</a><ul><li><a href='伺服器上的Git.html'>伺服器上的Git</a><ul><li><a href='通訊協定種類.html'>通訊協定種類</a><li><a href='在伺服器上佈署Git.html'>在伺服器上佈署Git</a><li><a href='產生個人的SSH公鑰.html'>產生個人的SSH公鑰</a><li><a href='伺服器的設定.html'>伺服器的設定</a><li><a href='Git常駐程式.html'>Git常駐程式</a></li></ul></nav><section><div id="tipue_search_content">更改帳號 << <a href='更改帳號.html'>Previous</a> <a href='ungit上傳資料.html'>Next</a> >> ungit上傳資料<br /><h1>ungit上推問題與解決</h1>
-<p>ungit無法確認身分，導致無法推送</p>
-<p><img alt="" height="385" src="./../images/fail.png" width="800"/></p>
-<p><span>以 </span><span>SciTE 編輯器編輯 start_cadlab.bat<br/>把最後的 home 更改成 home_cadlab ，因為帳號在 home_cadlab 這個資料夾裡面</span></p>
-<p><span><img alt="" height="740" src="./../images/change.png" width="576"/></span></p>
-<p><span></span>更改並儲存之後點擊 stop.bat 關閉，並重新打開，就可以正常上推資料了</p>
-<p><img alt="" height="385" src="./../images/solved.png" width="800"/></p>
-<br />更改帳號 << <a href='更改帳號.html'>Previous</a> <a href='ungit上傳資料.html'>Next</a> >> ungit上傳資料</div></section></div></body></html>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><div class="tipue_search_group"><input style="width: 6vw;" type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="Press enter key to search" required></div><li><a href='簡介.html'>簡介</a><li><a href='組員.html'>組員</a><li><a href='課程內容.html'>課程內容</a><ul><li><a href='建立可攜系統.html'>建立可攜系統</a><li><a href='ungit-建立.html'>ungit-建立</a><ul><li><a href='更改帳號.html'>更改帳號</a><li><a href='ungit上推問題與解決.html'>ungit上推問題與解決</a><li><a href='ungit上傳資料.html'>ungit上傳資料</a></li></ul><li><a href='SSH Public Key.html'>SSH Public Key</a></li></ul><li><a href='V-rep.html'>V-rep</a><ul><li><a href='模擬影片.html'>模擬影片</a><li><a href='手足球圖檔.html'>手足球圖檔</a></li></ul><li><a href='個人操作影片.html'>個人操作影片</a><li><a href='git 手冊.html'>git 手冊</a><ul><li><a href='伺服器上的Git.html'>伺服器上的Git</a><ul><li><a href='通訊協定種類.html'>通訊協定種類</a><li><a href='在伺服器上佈署Git.html'>在伺服器上佈署Git</a><li><a href='產生個人的SSH公鑰.html'>產生個人的SSH公鑰</a><li><a href='伺服器的設定.html'>伺服器的設定</a><li><a href='Git常駐程式.html'>Git常駐程式</a></li></ul></nav><section><div id="tipue_search_content">在伺服器上佈署Git << <a href='在伺服器上佈署Git.html'>Previous</a> <a href='伺服器的設定.html'>Next</a> >> 伺服器的設定<br /><h1>產生個人的SSH公鑰</h1>
+<p>在該目錄並列出內容來輕鬆檢查是否已有密鑰。<br/>輸入指令後有出現文件為id_dsa(id_rsa)為自己私人的密鑰，而文件後方多了.pub則為公鑰。如下:<br/><strong>~/.ssh為目錄</strong></p>
+<p>$ cd ~/.ssh</p>
+<p>$ ls</p>
+<p>authorized_keys2</p>
+<p>id_dsa</p>
+<p>known_hosts</p>
+<p>config</p>
+<p>id_dsa.pub</p>
+<p>如沒有密鑰時，可輸入下列指令來創建。</p>
+<p>$ ssh-keygen</p>
+<p>之後，會需要確保密鑰（.ssh/id_rsa）的位置，需輸入兩次密碼，不需要則可空白。</p>
+<p>如用戶需要複製有公鑰文件的內容，輸入下列指令。<br/><strong>~/.ssh/id_rsa為公鑰位置</strong></p>
+<p>$ cat ~/.ssh/id_rsa.pub</p>
+<br />在伺服器上佈署Git << <a href='在伺服器上佈署Git.html'>Previous</a> <a href='伺服器的設定.html'>Next</a> >> 伺服器的設定</div></section></div></body></html>
