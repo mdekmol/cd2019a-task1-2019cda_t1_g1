@@ -211,4 +211,45 @@
 <p>將文件推送至遠端儲存庫。</p>
 <p><strong>myproject為文件</strong></p>
 <h3>Git常駐程式</h3>
+<p>如不想將大量的項目或人員都添加SSH密鑰時，以守護進程的方式運行下列指令:<br/>此方法雖然設置方便而快速，但因沒有密鑰的身分驗證，所以任何人都可以存取裡面的內容。多用於世界性的公開項目。</p>
+<p>$ git daemon --reuseaddr --base-path=/opt/git/ /opt/git/</p>
+<p><strong>--reuseaddr是允許服務器重新啟動而無需等待舊連接超時</strong></p>
+<p><strong>--base-path是允許人們克隆項目而不指定整個路徑</strong></p>
+<p>**最後的路徑需告訴Git守護程序在哪裡查找要導出的存儲庫**</p>
+<p>如果你正在運行防火牆，你還需要在你正在設置它的盒子上的端口9418處打一個洞。<br/>但建議將此守護程序作為具有存儲庫的唯讀權限的用戶運行。</p>
+<p>在Ubuntu計算機上，您可以使用Upstart的腳本，並在文件中放入腳本。</p>
+<p>**文件為/etc/init/local-git-daemon.conf**</p>
+<p>腳本:</p>
+<p>start on startup</p>
+<p>stop on shutdown</p>
+<p>exec /usr/bin/git daemon \</p>
+<p>--user=git --group=git \</p>
+<p>--reuseaddr \</p>
+<p>--base-path=/opt/git/ \</p>
+<p>/opt/git/</p>
+<p>respawn</p>
+<p>要在不重新啟動的情況下運行計算機時</p>
+<p>$ initctl start local-git-daemon</p>
+<p>允許未經身份驗證的用戶存取指定的儲存庫。</p>
+<p>$ cd /path/to/project.git</p>
+<p>$ touch git-daemon-export-ok</p>
+<h2>分散式的Git</h2>
+<h3>分散式工作流程</h3>
+<p>分散式工作流程分為三種</p>
+<p>集中式工作流程、整合式管理員工作流程、企業型工作流程</p>
+<p>集中式工作流程</p>
+<p>如前者有人推送，後者必須合併前者的版本，不然會無法推送至儲存庫，是因為避免前者的資料被覆蓋。</p>
+<p>整合式管理員工作流程</p>
+<p>項目維護者=A、開發人員=B</p>
+<p>A推送到他們的公共儲存庫。</p>
+<p>B克隆該存儲庫並進行更改，並推動他們自己的公共副本。</p>
+<p>B向A發送一封電子郵件，要求A提取更改。</p>
+<p>A將B的repo添加為遠程，合併原先的資料，推送到主儲存庫。</p>
+<p>企業型工作流程</p>
+<p>老闆=A、副手=B、開發人員=C</p>
+<p>正常的C會在他們主題的分支上工作，並在重新定義他們在master上的工作。而master分支是獨裁者的分支。</p>
+<p>B將C的主題分支合併到B的master分支中。</p>
+<p>A將B的master分支合併到A的master分支中。</p>
+<p>A將他們推master送到參考存儲庫，以便其他C可以對其進行重新定義。</p>
+<p></p>
 <p></p>
