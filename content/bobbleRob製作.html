@@ -1,0 +1,112 @@
+<!doctype html>
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>2019cda_Tg1</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
+<script src="tipuesearch_content.js"></script>
+<script src="./../static/jquery.js"></script>
+<link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css">
+<script src="./../static/tipuesearch/tipuesearch_set.js"></script>
+<script src="./../static/tipuesearch/tipuesearch.min.js"></script>
+
+<script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCSharp.js"></script>
+<link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- for LaTeX equations 暫時不用
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+-->
+<!-- 暫時不用
+<script src="./../static/fengari-web.js"></script>
+<script type="text/javascript" src="./../static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+
+<script type="text/javascript">
+/*shorthand of $(document).ready(function(){};); */
+$(function(){
+    $("ul.topmenu> li:has(ul) > a").append('<div class="arrow-right"></div>');
+    $("ul.topmenu > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
+});
+function doSearch() {
+     $('#tipue_search_input').tipuesearch({
+        newWindow: true, minimumLength: 2
+     });
+}
+$(document).ready(doSearch);
+</script>
+
+</head><header><h1>產品協同設計第一組</h1> <confmenu>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="sitemap.html">Site Map</a></li>
+<li><a href="./../reveal/index.html">reveal</a></li>
+<li><a href="./../blog/index.html">blog</a></li>
+
+</ul>
+</confmenu></header>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><div class="tipue_search_group"><input style="width: 6vw;" type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="Press enter key to search" required></div><li><a href='簡介.html'>簡介</a><li><a href='組員.html'>組員</a><li><a href='課程內容.html'>課程內容</a><ul><li><a href='建立可攜系統.html'>建立可攜系統</a><li><a href='ungit-建立.html'>ungit-建立</a><ul><li><a href='更改帳號.html'>更改帳號</a><li><a href='ungit上推問題與解決.html'>ungit上推問題與解決</a><li><a href='ungit上傳資料.html'>ungit上傳資料</a></li></ul><li><a href='SSH Public Key.html'>SSH Public Key</a></li></ul><li><a href='V-rep.html'>V-rep</a><ul><li><a href='模擬影片.html'>模擬影片</a><li><a href='手足球圖檔.html'>手足球圖檔</a><li><a href='bobbleRob製作.html'>bobbleRob製作</a></li></ul><li><a href='個人操作影片.html'>個人操作影片</a><li><a href='git 手冊.html'>git 手冊</a><ul><li><a href='伺服器上的Git.html'>伺服器上的Git</a><ul><li><a href='通訊協定種類.html'>通訊協定種類</a><li><a href='在伺服器上佈署Git.html'>在伺服器上佈署Git</a><li><a href='產生個人的SSH公鑰.html'>產生個人的SSH公鑰</a><li><a href='伺服器的設定.html'>伺服器的設定</a><li><a href='Git常駐程式.html'>Git常駐程式</a></li></ul><li><a href='分散式的Git.html'>分散式的Git</a><ul><li><a href='分散式工作流程.html'>分散式工作流程</a></li></ul></nav><section><div id="tipue_search_content">手足球圖檔 << <a href='手足球圖檔.html'>Previous</a> <a href='個人操作影片.html'>Next</a> >> 個人操作影片<br /><h1>bobbleRob製作</h1>
+<p><span>1. 創建 [Menu bar --&gt; Add --&gt; Primitive shape --&gt; Sphere] 新增直徑為  0.2 m 的球體，雙擊球體，打開編輯視窗，將<strong>Collidable,</strong><span><span> </span></span><strong>Measurable,</strong><span><span> </span></span><strong>Renderable</strong><span><span> </span>and<span> </span></span><strong>Detectable<span> </span></strong><span>選項勾選</span></span></p>
+<p><span><img alt="" height="296" src="./../images/Sphere.png" width="396"/></span></p>
+<p><span><img alt="" height="615" src="./../images/cc.png" width="396"/></span></p>
+<p><span>2. 點選球體，移動球體位置，到<strong>translation</strong><span>，在Z軸上打上 0.02，</span><strong>Relative to </strong><span>在</span><strong>World<span> </span></strong><span>後，點</span><strong>Translate selection</strong><span>，球體就會往上到適合的位置</span></span></p>
+<p><span><span><img alt="" height="382" src="./../images/up.png" width="800"/></span></span></p>
+<p><span><span>3. [Menu bar --&gt; Add --&gt; Proximity sensor --&gt; Cone type] 新增距離感測器，在旋轉視窗，在Y.Z軸打上90度，再來在位置視窗，在X及Z軸輸入0.1及0.12將感測器對準球體中心</span></span></p>
+<p><span><span><img alt="" height="382" src="./../images/add.png" width="800"/></span></span></p>
+<p><span><span><img alt="" height="382" src="./../images/position.png" width="800"/></span></span></p>
+<p><span><span><img alt="" height="382" src="./../images/Rotate.png" width="800"/></span></span></p>
+<p><span><span>4. </span></span>雙擊感測器進入編輯視窗，點擊<strong>Show volume parameter</strong>按鈕，輸入:  <strong>Offset</strong><span> </span>: 0.005   <strong>Angle</strong><span> </span>: 30    <strong>Range</strong><span> </span>: 0.15   點擊<strong>Show detection parameters</strong>，取消<strong>Don't allow detections if distance smaller than</strong></p>
+<p><strong><img alt="" height="382" src="./../images/allow.png" width="800"/></strong></p>
+<p><strong>5.<span> [Menu bar --&gt; Add --&gt; Primitive shape --&gt; cylinder]  </span><span>新增一個（0.08,0.08,0.02）的圓柱體當作輪子，點選圓柱將<strong>Collidable,</strong><span><span> </span></span><strong>Measurable,</strong><span><span> </span></span><strong>Renderable</strong><span><span> </span>and<span> </span></span><strong>Detectable<span> </span></strong><span>選項勾選</span>，之後更改<strong>絕對位置</strong><span>及</span><strong>絕對方向 ( 0.05 , 0.1  ,0.04 )</strong><span>，更改完複製一個將絕對位置Y座標設 -0.1，再來做馬達 [Menu bar --&gt; Add --&gt; Joint --&gt; Revolute]，選擇的馬達再案shift鍵選擇左輪，在位置視窗點 <strong>Apply to selection </strong><span>，在旋轉視窗點 </span><strong>Apply to selection ，</strong><span>右輪也照著上一個步驟</span></span></span></strong></p>
+<p><strong><span><span><span><img alt="" height="382" src="./../images/rr.png" width="800"/></span></span></span></strong></p>
+<p><strong><span><span><span>6. 新增一個直徑0.05的球，讓它有 <strong>Collidable，Measurable，Renderable和Detectable </strong><span>，[Menu bar --&gt; Add --&gt; Force sensor] 增加一個力傳感器並向上移動0.05，與球連接起來，並沿X軸移動 -0.07連接本體</span></span></span></span></strong></p>
+<p><strong><span><span><span><span><img alt="" height="382" src="./../images/sh.png" width="800"/></span></span></span></span></strong></p>
+<p><strong><span><span><span><span>7.  [Menu bar --&gt; Tools --&gt; Collections] ，點<strong>Add new collection </strong><span>，選擇新的集合項目為bubbleRob，點<span>選</span></span><strong>Add </strong><span>，並改名為 </span><strong>bubbleRob_collection</strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><img alt="" height="663" src="./../images/cll.png" width="396"/></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong>8. [Menu bar --&gt; Tools --&gt; Calculation module properties]，點<strong>Add new distance object</strong><span>，選擇新的集合項目</span><strong>bubbleRob_collection</strong><span>，重命名為</span><strong>bubbleRob_distance</strong></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><img alt="" height="467" src="./../images/Collections.png" width="396"/></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong>9. [Menu bar --&gt; Add --&gt; Graph]<span>，</span></strong></span></span></span></span></strong>改名為<strong><span><span><span><span><strong><span> "</span><strong><em>bubbleRob_graph</em></strong><span>"，將graph拉到</span><em>bubbleRob</em><span>底下並設定graph的位置再 ( 0，0，0.005 )，點</span></strong></span></span></span></span></strong><span>擊 <strong><em>bubbleRob_graph</em></strong>，取消 "<strong>Display XYZ-planes</strong>"然後點 <strong>Add new data stream to record  ， </strong></span><span><span><span><strong>Data stream type  : <span> </span></strong>absolute x-position     </span></span></span><span><span><span><strong><strong>Object / item to record</strong>  :  </strong><em>bubbleRob_graph，Y</em>與 Z做法一樣，</span></span></span></p>
+<p><span><span><span><em><img alt="" height="649" src="./../images/po.png" width="396"/></em></span></span></span></p>
+<p>10. <span>點 <strong>Edit 3D curves，再點</strong> <strong>Add new curve</strong>，在對話框哩，如下設定 : <br/></span></p>
+<p><span><span><span> <strong>X-value :<span> </span></strong><em>bubbleRob_x_pos</em><strong><br/></strong></span></span></span></p>
+<p><span><span><span><strong>Y-value : </strong><em>bubbleRob_y_pos</em><strong><span> </span></strong><br/></span></span></span></p>
+<p><span><span><span><strong>Z-value : <span> </span></strong><em>bubbleRob_z_pos</em><span> </span></span></span></span></p>
+<p><span><span><span>點選下面的<strong><span> </span>Relative to world</strong><span> 並</span>設定<span> </span><strong>Curve width</strong><span> </span>為 4</span></span></span></p>
+<p><span><span><span>11.  <strong>[Menu bar --&gt; Add --&gt; Vision sensor --&gt; Perspective type] </strong><span>打開  </span><strong>vision sensor<span> </span></strong><span>，將</span><span>position and orientation 設置為 (0,0,0)，將 <strong>Far clipping plane </strong>設為1，<strong>Resolution X / Y </strong>設為 256 / 256 ，再來選擇 <strong>Show filter dialog</strong><span>，點  </span><strong>Edge detection on work image 再來</strong><span>點 </span><strong>Add filter </strong><span>來新增，並按旁邊向上的箭頭使它到中間，然後雙擊改 </span><strong>Threshold = 0.2</strong></span></span></span></span></p>
+<p><span><span><span><span><img alt="" height="546" src="./../images/256.png" width="396"/></span></span></span></span></p>
+<p><span><span><span><span>12. 在<strong> </strong><span><strong>scene</strong><span> </span>上 右鍵<span> </span><strong>add floating view</strong><span> </span>，然後在浮動視窗上面 選 view &gt; Associate view with selected vision sensor<span> ，並小腳本圖標，複製以下代碼貼到腳本</span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><img alt="" height="426" src="./../images/vrep_NWH4Io47HF.png" width="800"/></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><img alt="" height="426" src="./../images/vrep_NWH4Io47HF.png" width="800"/></span></span></span></span></span></span></p><br />手足球圖檔 << <a href='手足球圖檔.html'>Previous</a> <a href='個人操作影片.html'>Next</a> >> 個人操作影片</div></section></div></body></html>

@@ -96,8 +96,36 @@
 <p><a href="https://cad.onshape.com/documents/fa20c2ed0e7a922412361593/w/8ebdbec3f31dbeae5cebbfd1/e/9806c49758c669a114e1d9b7">https://cad.onshape.com/documents/fa20c2ed0e7a922412361593/w/8ebdbec3f31dbeae5cebbfd1/e/9806c49758c669a114e1d9b7</a></p>
 <p><a href="https://cad.onshape.com/documents/3dc0d778d1aef1fcb2350f0e/w/333f4f1feb8012c770139991/e/66bb98a3a7f247e71feb123e">https://cad.onshape.com/documents/3dc0d778d1aef1fcb2350f0e/w/333f4f1feb8012c770139991/e/66bb98a3a7f247e71feb123e</a></p>
 <p><a href="https://cad.onshape.com/documents/2d4e6f40d5c6e87b037075c2/w/935f73e23815e2819ea12f5e/e/b85b0468a4fe08cefcb12774">https://cad.onshape.com/documents/2d4e6f40d5c6e87b037075c2/w/935f73e23815e2819ea12f5e/e/b85b0468a4fe08cefcb12774</a></p>
-<p></p>
-<h1>個人操作影片</h1>
+<h2>bobbleRob製作</h2>
+<p><span>1. 創建 [Menu bar --&gt; Add --&gt; Primitive shape --&gt; Sphere] 新增直徑為  0.2 m 的球體，雙擊球體，打開編輯視窗，將<strong>Collidable,</strong><span><span> </span></span><strong>Measurable,</strong><span><span> </span></span><strong>Renderable</strong><span><span> </span>and<span> </span></span><strong>Detectable<span> </span></strong><span>選項勾選</span></span></p>
+<p><span><img alt="" height="296" src="/images/Sphere.png" width="396"/></span></p>
+<p><span><img alt="" height="615" src="/images/cc.png" width="396"/></span></p>
+<p><span>2. 點選球體，移動球體位置，到<strong>translation</strong><span>，在Z軸上打上 0.02，</span><strong>Relative to </strong><span>在</span><strong>World<span> </span></strong><span>後，點</span><strong>Translate selection</strong><span>，球體就會往上到適合的位置</span></span></p>
+<p><span><span><img alt="" height="382" src="/images/up.png" width="800"/></span></span></p>
+<p><span><span>3. [Menu bar --&gt; Add --&gt; Proximity sensor --&gt; Cone type] 新增距離感測器，在旋轉視窗，在Y.Z軸打上90度，再來在位置視窗，在X及Z軸輸入0.1及0.12將感測器對準球體中心</span></span></p>
+<p><span><span><img alt="" height="382" src="/images/add.png" width="800"/></span></span></p>
+<p><span><span><img alt="" height="382" src="/images/position.png" width="800"/></span></span></p>
+<p><span><span><img alt="" height="382" src="/images/Rotate.png" width="800"/></span></span></p>
+<p><span><span>4. </span></span>雙擊感測器進入編輯視窗，點擊<strong>Show volume parameter</strong>按鈕，輸入:  <strong>Offset</strong><span> </span>: 0.005   <strong>Angle</strong><span> </span>: 30    <strong>Range</strong><span> </span>: 0.15   點擊<strong>Show detection parameters</strong>，取消<strong>Don't allow detections if distance smaller than</strong></p>
+<p><strong><img alt="" height="382" src="/images/allow.png" width="800"/></strong></p>
+<p><strong>5.<span> [Menu bar --&gt; Add --&gt; Primitive shape --&gt; cylinder]  </span><span>新增一個（0.08,0.08,0.02）的圓柱體當作輪子，點選圓柱將<strong>Collidable,</strong><span><span> </span></span><strong>Measurable,</strong><span><span> </span></span><strong>Renderable</strong><span><span> </span>and<span> </span></span><strong>Detectable<span> </span></strong><span>選項勾選</span>，之後更改<strong>絕對位置</strong><span>及</span><strong>絕對方向 ( 0.05 , 0.1  ,0.04 )</strong><span>，更改完複製一個將絕對位置Y座標設 -0.1，再來做馬達 [Menu bar --&gt; Add --&gt; Joint --&gt; Revolute]，選擇的馬達再案shift鍵選擇左輪，在位置視窗點 <strong>Apply to selection </strong><span>，在旋轉視窗點 </span><strong>Apply to selection ，</strong><span>右輪也照著上一個步驟</span></span></span></strong></p>
+<p><strong><span><span><span><img alt="" height="382" src="/images/rr.png" width="800"/></span></span></span></strong></p>
+<p><strong><span><span><span>6. 新增一個直徑0.05的球，讓它有 <strong>Collidable，Measurable，Renderable和Detectable </strong><span>，[Menu bar --&gt; Add --&gt; Force sensor] 增加一個力傳感器並向上移動0.05，與球連接起來，並沿X軸移動 -0.07連接本體</span></span></span></span></strong></p>
+<p><strong><span><span><span><span><img alt="" height="382" src="/images/sh.png" width="800"/></span></span></span></span></strong></p>
+<p><strong><span><span><span><span>7.  [Menu bar --&gt; Tools --&gt; Collections] ，點<strong>Add new collection </strong><span>，選擇新的集合項目為bubbleRob，點<span>選</span></span><strong>Add </strong><span>，並改名為 </span><strong>bubbleRob_collection</strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><img alt="" height="663" src="/images/cll.png" width="396"/></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong>8. [Menu bar --&gt; Tools --&gt; Calculation module properties]，點<strong>Add new distance object</strong><span>，選擇新的集合項目</span><strong>bubbleRob_collection</strong><span>，重命名為</span><strong>bubbleRob_distance</strong></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><img alt="" height="467" src="/images/Collections.png" width="396"/></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong>9. [Menu bar --&gt; Add --&gt; Graph]<span>，</span></strong></span></span></span></span></strong>改名為<strong><span><span><span><span><strong><span> "</span><strong><em>bubbleRob_graph</em></strong><span>"，將graph拉到</span><em>bubbleRob</em><span>底下並設定graph的位置再 ( 0，0，0.005 )，點</span></strong></span></span></span></span></strong><span>擊 <strong><em>bubbleRob_graph</em></strong>，取消 "<strong>Display XYZ-planes</strong>"然後點 <strong>Add new data stream to record  ， </strong></span><span><span><span><strong>Data stream type  : <span> </span></strong>absolute x-position     </span></span></span><span><span><span><strong><strong>Object / item to record</strong>  :  </strong><em>bubbleRob_graph，Y</em>與 Z做法一樣，</span></span></span></p>
+<p><span><span><span><em><img alt="" height="649" src="/images/po.png" width="396"/></em></span></span></span></p>
+<p>10. <span>點 <strong>Edit 3D curves，再點</strong> <strong>Add new curve</strong>，在對話框哩，如下設定 : <br/></span></p>
+<p><span><span><span> <strong>X-value :<span> </span></strong><em>bubbleRob_x_pos</em><strong><br/></strong></span></span></span></p>
+<p><span><span><span><strong>Y-value : </strong><em>bubbleRob_y_pos</em><strong><span> </span></strong><br/></span></span></span></p>
+<p><span><span><span><strong>Z-value : <span> </span></strong><em>bubbleRob_z_pos</em><span> </span></span></span></span></p>
+<p><span><span><span>點選下面的<strong><span> </span>Relative to world</strong><span> 並</span>設定<span> </span><strong>Curve width</strong><span> </span>為 4</span></span></span></p>
+<p><span><span><span>11.  <strong>[Menu bar --&gt; Add --&gt; Vision sensor --&gt; Perspective type] </strong><span>打開  </span><strong>vision sensor<span> </span></strong><span>，將</span><span>position and orientation 設置為 (0,0,0)，將 <strong>Far clipping plane </strong>設為1，<strong>Resolution X / Y </strong>設為 256 / 256 ，再來選擇 <strong>Show filter dialog</strong><span>，點  </span><strong>Edge detection on work image 再來</strong><span>點 </span><strong>Add filter </strong><span>來新增，並按旁邊向上的箭頭使它到中間，然後雙擊改 </span><strong>Threshold = 0.2</strong></span></span></span></span></p>
+<p><span><span><span><span><img alt="" height="546" src="/images/256.png" width="396"/></span></span></span></span></p>
+<p><span><span><span><span>12. 在<strong> </strong><span><strong>scene</strong><span> </span>上 右鍵<span> </span><strong>add floating view</strong><span> </span>，然後在浮動視窗上面 選 view &gt; Associate view with selected vision sensor<span> ，並小腳本圖標，複製以下代碼貼到腳本</span></span></span></span></span></span></p><h1>個人操作影片</h1>
 <p>40623119</p>
 <p><span>可攜系統</span></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/P32dakHkfbA" width="560"></iframe></p>
@@ -118,7 +146,8 @@
 <p><span>406231101-Vrep模擬</span></p>
 <p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/b4NTBfOlPCg" width="560"></iframe></span></p>
 <p><span>40623117-Vrep模擬</span></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/YB0cCIY2HFs" width="560"></iframe></p><h1>git 手冊</h1>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/YB0cCIY2HFs" width="560"></iframe></p>
+<h1>git 手冊</h1>
 <p>幾乎每一種版本控制系統（Version Control System，以下簡稱 VCS）都支援某種形式的分支（branch）功能， 使用分支意味著你可以從開發主線上分離開來，然後在不影響主線的情況下繼續工作。<br/>有人把 Git 的分支模型視為它的「殺手級功能」， 它有何特別之處呢？新建分支的操作幾乎可以在瞬間完成，並且一般來說切換不同分支也很快； 跟其它的 VCS 不一樣的地方是 Git 鼓勵在工作流程中頻繁地使用分支與合併（merge），即使一天之內進行許多次都沒問題。</p>
 <p><span>git branch </span>:建立一個新的分支這會在目前提交上新建一個指標，它並不會切換到這個分支。</p>
 <p><span>git checkout + 分支名稱</span>:切換到一個已經存在的分支。</p>
