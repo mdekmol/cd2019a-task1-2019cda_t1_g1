@@ -97,38 +97,127 @@
 <p><a href="https://cad.onshape.com/documents/3dc0d778d1aef1fcb2350f0e/w/333f4f1feb8012c770139991/e/66bb98a3a7f247e71feb123e">https://cad.onshape.com/documents/3dc0d778d1aef1fcb2350f0e/w/333f4f1feb8012c770139991/e/66bb98a3a7f247e71feb123e</a></p>
 <p><a href="https://cad.onshape.com/documents/2d4e6f40d5c6e87b037075c2/w/935f73e23815e2819ea12f5e/e/b85b0468a4fe08cefcb12774">https://cad.onshape.com/documents/2d4e6f40d5c6e87b037075c2/w/935f73e23815e2819ea12f5e/e/b85b0468a4fe08cefcb12774</a></p>
 <h2>bobbleRob製作</h2>
-<p><span>1. 創建 [Menu bar --&gt; Add --&gt; Primitive shape --&gt; Sphere] 新增直徑為  0.2 m 的球體，雙擊球體，打開編輯視窗，將<strong>Collidable,</strong><span><span> </span></span><strong>Measurable,</strong><span><span> </span></span><strong>Renderable</strong><span><span> </span>and<span> </span></span><strong>Detectable<span> </span></strong><span>選項勾選</span></span></p>
-<p><span><img alt="" height="296" src="/images/Sphere.png" width="396"/></span></p>
-<p><span><img alt="" height="615" src="/images/cc.png" width="396"/></span></p>
+<p><span>1.</span><span>創建 [Menu bar --&gt; Add --&gt; Primitive shape --&gt; Sphere] </span></p>
+<p><span><strong><img alt="" height="840" src="/images/1.png" width="1566"/></strong></span></p>
+<p><span><strong>新增直徑為 <span style="color: #ff0000;"> 0.2 m</span> 的球體</strong></span></p>
+<p><span><strong><img alt="" height="300" src="/images/2.png" width="382"/></strong></span></p>
+<p><span><strong>雙擊球體，打開編輯視窗，將<strong><span><span style="color: #ff0000;">Collidable(可碰撞)</span>、<span style="color: #ff0000;">Measurable(可測量)</span>、<span style="color: #ff0000;">Renderable(可渲染)</span>、<span style="color: #ff0000;">Detectable(可檢測)</span></span></strong><span style="color: #ff0000;">都打勾</span></strong></span><img alt="" height="618" src="/images/4-1.png" width="380"/></p>
+<p><span>接著在選單雙擊<span style="color: #ff0000;">Sphere將物件名稱</span>改為<span style="color: #ff0000;">BubbleRob</span>就完成本體設定</span></p>
 <p><span>2. 點選球體，移動球體位置，到<strong>translation</strong><span>，在Z軸上打上 0.02，</span><strong>Relative to </strong><span>在</span><strong>World<span> </span></strong><span>後，點</span><strong>Translate selection</strong><span>，球體就會往上到適合的位置</span></span></p>
 <p><span><span><img alt="" height="382" src="/images/up.png" width="800"/></span></span></p>
-<p><span><span>3. [Menu bar --&gt; Add --&gt; Proximity sensor --&gt; Cone type] 新增距離感測器，在旋轉視窗，在Y.Z軸打上90度，再來在位置視窗，在X及Z軸輸入0.1及0.12將感測器對準球體中心</span></span></p>
-<p><span><span><img alt="" height="382" src="/images/add.png" width="800"/></span></span></p>
-<p><span><span><img alt="" height="382" src="/images/position.png" width="800"/></span></span></p>
-<p><span><span><img alt="" height="382" src="/images/Rotate.png" width="800"/></span></span></p>
-<p><span><span>4. </span></span>雙擊感測器進入編輯視窗，點擊<strong>Show volume parameter</strong>按鈕，輸入:  <strong>Offset</strong><span> </span>: 0.005   <strong>Angle</strong><span> </span>: 30    <strong>Range</strong><span> </span>: 0.15   點擊<strong>Show detection parameters</strong>，取消<strong>Don't allow detections if distance smaller than</strong></p>
-<p><strong><img alt="" height="382" src="/images/allow.png" width="800"/></strong></p>
-<p><strong>5.<span> [Menu bar --&gt; Add --&gt; Primitive shape --&gt; cylinder]  </span><span>新增一個（0.08,0.08,0.02）的圓柱體當作輪子，點選圓柱將<strong>Collidable,</strong><span><span> </span></span><strong>Measurable,</strong><span><span> </span></span><strong>Renderable</strong><span><span> </span>and<span> </span></span><strong>Detectable<span> </span></strong><span>選項勾選</span>，之後更改<strong>絕對位置</strong><span>及</span><strong>絕對方向 ( 0.05 , 0.1  ,0.04 )</strong><span>，更改完複製一個將絕對位置Y座標設 -0.1，再來做馬達 [Menu bar --&gt; Add --&gt; Joint --&gt; Revolute]，選擇的馬達再案shift鍵選擇左輪，在位置視窗點 <strong>Apply to selection </strong><span>，在旋轉視窗點 </span><strong>Apply to selection ，</strong><span>右輪也照著上一個步驟</span></span></span></strong></p>
-<p><strong><span><span><span><img alt="" height="382" src="/images/rr.png" width="800"/></span></span></span></strong></p>
-<p><strong><span><span><span>6. 新增一個直徑0.05的球，讓它有 <strong>Collidable，Measurable，Renderable和Detectable </strong><span>，[Menu bar --&gt; Add --&gt; Force sensor] 增加一個力傳感器並向上移動0.05，與球連接起來，並沿X軸移動 -0.07連接本體</span></span></span></span></strong></p>
-<p><strong><span><span><span><span><img alt="" height="382" src="/images/sh.png" width="800"/></span></span></span></span></strong></p>
-<p><strong><span><span><span><span>7.  [Menu bar --&gt; Tools --&gt; Collections] ，點<strong>Add new collection </strong><span>，選擇新的集合項目為bubbleRob，點<span>選</span></span><strong>Add </strong><span>，並改名為 </span><strong>bubbleRob_collection</strong></span></span></span></span></strong></p>
+<p><span><span>3. [Menu bar --&gt; Add --&gt; Proximity sensor --&gt; Cone type] 新增距離感測器</span></span></p>
+<p><span><span><img alt="" height="653" src="/images/5.png" width="1329"/></span></span></p>
+<p><span>將sensor利用旋轉功能在</span><span>Around Y及Z</span><span>輸入</span><span>90</span></p>
+<p><span><span><img alt="" height="208" src="/images/7.png" width="380"/></span></span></p>
+<p><span>位置為</span><span style="color: #ff0000;"><strong>X-coord</strong></span><span>輸入</span><span>0.1</span><span>及</span><span style="color: #ff0000;"><strong>Z-coord</strong></span><span>輸入</span><span>0.12</span></p>
+<p><span><img alt="" height="208" src="/images/6.png" width="380"/></span></p>
+<p><span><span>4. </span></span>雙擊感測器進入編輯視窗，點擊<span style="color: #ff0000;"><strong>Show volume parameter</strong></span>按鈕</p>
+<p><img alt="" height="386" src="/images/8-1.png" width="380"/></p>
+<p>輸入:  <span style="color: #ff0000;"><strong>Offset</strong> : 0.005 </span>  <span style="color: #ff0000;"><strong>Angle</strong> : 30 </span>  <span style="color: #ff0000;"> <strong>Range</strong> : 0.15</span>   </p>
+<p><img alt="" height="258" src="/images/9-1.png" width="361"/></p>
+<p>點擊<span style="color: #ff0000;"><strong>Show detection parameters</strong></span>，取消<span style="color: #ff0000;"><strong>Don't allow detections if distance smaller than</strong></span></p>
+<p><img alt="" height="266" src="/images/10-1.png" width="382"/></p>
+<p>將感測器名稱設定為<span style="color: #ff0000;">bubbleRob_sensingNose</span>，就完成感測器設定了。</p>
+<p>在<span>Scene hireachy</span>(場景等級)將完成設定的sensor放在bubbleRob下</p>
+<p>最後將兩項物件<strong><span>Edit-&gt;"Make last selected object parent"</span></strong>連結成一個物件,如下圖</p>
+<p><img alt="" height="170" src="/images/12-1.png" width="297"/></p>
+<p><strong>5.<span> <span>建立bubbleRob的輪子</span></span></strong></p>
+<p><span>建立一個</span><span>cylinder</span></p>
+<p><strong><span><img alt="" height="694" src="/images/13.png" width="1412"/></span></strong></p>
+<p><strong><span>尺寸為(0.08,0.08,0.02)</span></strong></p>
+<p><strong><span><img alt="" height="300" src="/images/14.png" width="382"/></span></strong></p>
+<p><strong><span>跟本體一樣將<span style="color: #ff0000;"><strong>object common properties</strong>內的特殊屬性都打開</span></span></strong></p>
+<p><strong><span>更改<strong>絕對位置</strong><span>及</span><strong>絕對方向 ( 0.05 , 0.1  ,0.04 )</strong><span>，</span></span></strong></p>
+<p><strong><span><span><img alt="" height="208" src="/images/15.png" width="380"/></span></span></strong></p>
+<p><strong><span><span>旋轉(-90,0,0)</span></span></strong></p>
+<p><strong><span><span><img alt="" height="208" src="/images/16.png" width="380"/></span></span></strong></p>
+<p><strong><span><span>此物件命名為<span style="color: #ff0000;"><strong>bubbleRob_leftWheel</strong></span></span></span></strong></p>
+<p><strong><span><span>更改完複製一個將絕</span></span></strong><strong><span><span>對位置<span style="color: #ff0000;">Y座標設 -0.1</span></span></span></strong></p>
+<p><span style="color: #000000;"><strong><img alt="" height="208" src="/images/17.png" width="380"/></strong></span></p>
+<p><span style="color: #000000;"><strong><span>此物件命名為</span><span style="color: #ff0000;"><strong>bubbleRob_RightWheel</strong></span></strong></span></p>
+<p><strong><span><span><span style="color: #ff0000;">Add-&gt;joint-&gt;Revolute(迴轉)建立一個軸</span>，建立完成按住ctrl選擇剛剛的<span style="color: #ff0000;">bubbleRob_leftWheel</span><span>然後在</span><span style="color: #ff0000;">postion</span><span><span style="color: #ff0000;">(位置)</span>及</span><span style="color: #ff0000;"> orientation</span><span><span style="color: #ff0000;">(方向)</span>內選擇</span><span style="color: #ff0000;">apply to selection</span><span>來複製輪子的參數，這樣軸的位置就會跟左邊輪子一樣了。</span></span></span></strong></p>
+<p><strong><span><span><span><img alt="" height="762" src="/images/19.png" width="1551"/></span></span></span></strong></p>
+<p><strong><span><span><span><img alt="" height="736" src="/images/20.png" width="1498"/></span></span></span></strong></p>
+<p><strong><span>完成左邊輪軸設定後，用同樣方式製作右輪軸。</span></strong></p>
+<p><span>最後將輪子層級放置在輪軸底下，輪軸層級則置於本體下</span></p>
+<p><img alt="" height="223" src="/images/21.png" width="295"/></p>
+<p><span>在軸的dynamic對話框將</span><span style="color: #ff0000;"><strong>Target velocity</strong></span><span><span style="color: #ff0000;">設至50</span></span></p>
+<p><span><span style="color: #ff0000;"><img alt="" height="496" src="/images/51-1.png" width="380"/></span></span></p>
+<p><strong><span><span><span>6. 新增一個直徑0.05的球，一樣打開所有特殊屬性</span></span></span></strong></p>
+<p><strong><span><span><span><span>[Menu bar --&gt; Add --&gt; Force sensor] </span></span></span></span></strong></p>
+<p><strong><span><span><span><span><img alt="" height="657" src="/images/23.png" width="1337"/></span></span></span></span></strong></p>
+<p><strong><span><span><span><span>增加一個力傳感器並向上移動0.05</span></span></span></span></strong></p>
+<p><strong><span><span><span><span><img alt="" height="208" src="/images/24.png" width="380"/></span></span></span></span></strong></p>
+<p><strong><span><span><span><span>與球連接起來</span></span></span></span></strong></p>
+<p><strong><span><span><span><span><img alt="" height="112" src="/images/25.png" width="300"/></span></span></span></span></strong></p>
+<p><span>跟剛剛的滑塊接合成一個物件，這個物件的位置設定X=(-0.07)</span></p>
+<p><span><img alt="" height="592" src="/images/26.png" width="993"/></span></p>
+<p><span>執行模擬後會發現滑塊會微微震動，那是因為滑塊跟本體互相碰撞了，為了避免這種狀況，開啟滑塊及本體的</span><span><strong>shape dynamics properties</strong>將<strong>local respondable mask</strong></span><span>分別設定為<span style="color: #ff0000;">00001111</span>及</span><span><span style="color: #ff0000;">11110000</span>這樣兩個物件就不會互相碰撞了。</span></p>
+<p><span>本體設定</span></p>
+<p><span><img alt="" height="170" src="/images/28.png" width="381"/></span></p>
+<p><span>滑塊設定</span></p>
+<p><span><img alt="" height="138" src="/images/27.png" width="378"/></span></p>
+<p><strong><span><span><span><span>7.  <span>在collection對話框內</span></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><img alt="" height="35" src="/images/007.png" width="41"/></span></span></span></span></strong></p>
+<p><strong><span><span><span><span>點<strong><span style="color: #ff0000;">Add new collection</span> </strong><span>，選擇新的集合項目為bubbleRob，點<span>選</span></span><strong>Add </strong><span>，並改名為 </span><strong>bubbleRob_collection</strong></span></span></span></span></strong></p>
 <p><strong><span><span><span><span><strong><img alt="" height="663" src="/images/cll.png" width="396"/></strong></span></span></span></span></strong></p>
-<p><strong><span><span><span><span><strong>8. [Menu bar --&gt; Tools --&gt; Calculation module properties]，點<strong>Add new distance object</strong><span>，選擇新的集合項目</span><strong>bubbleRob_collection</strong><span>，重命名為</span><strong>bubbleRob_distance</strong></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong>8. 在選單點選<span>Calculation module</span><span style="color: #ff0000;">在distance(距離)下</span></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><span><img alt="" height="38" src="/images/00007.png" width="44"/></span></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><img alt="" height="470" src="/images/32-1.png" width="380"/></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong>點<span style="color: #ff0000;"><strong>Add new distance object</strong></span><span>，選擇新的集合項目</span><span style="color: #ff0000;"><strong>bubbleRob_collection</strong></span><span>，重命名為</span><span style="color: #ff0000;"><strong>bubbleRob_distance</strong></span></strong></span></span></span></span></strong></p>
 <p><strong><span><span><span><span><strong><img alt="" height="467" src="/images/Collections.png" width="396"/></strong></span></span></span></span></strong></p>
-<p><strong><span><span><span><span><strong>9. [Menu bar --&gt; Add --&gt; Graph]<span>，</span></strong></span></span></span></span></strong>改名為<strong><span><span><span><span><strong><span> "</span><strong><em>bubbleRob_graph</em></strong><span>"，將graph拉到</span><em>bubbleRob</em><span>底下並設定graph的位置再 ( 0，0，0.005 )，點</span></strong></span></span></span></span></strong><span>擊 <strong><em>bubbleRob_graph</em></strong>，取消 "<strong>Display XYZ-planes</strong>"然後點 <strong>Add new data stream to record  ， </strong></span><span><span><span><strong>Data stream type  : <span> </span></strong>absolute x-position     </span></span></span><span><span><span><strong><strong>Object / item to record</strong>  :  </strong><em>bubbleRob_graph，Y</em>與 Z做法一樣，</span></span></span></p>
-<p><span><span><span><em><img alt="" height="649" src="/images/po.png" width="396"/></em></span></span></span></p>
-<p>10. <span>點 <strong>Edit 3D curves，再點</strong> <strong>Add new curve</strong>，在對話框哩，如下設定 : <br/></span></p>
-<p><span><span><span> <strong>X-value :<span> </span></strong><em>bubbleRob_x_pos</em><strong><br/></strong></span></span></span></p>
-<p><span><span><span><strong>Y-value : </strong><em>bubbleRob_y_pos</em><strong><span> </span></strong><br/></span></span></span></p>
-<p><span><span><span><strong>Z-value : <span> </span></strong><em>bubbleRob_z_pos</em><span> </span></span></span></span></p>
+<p><strong><span><span><span><span><strong>9.新增一個Graph命名為<span style="color: #ff0000;">bubbleRob_graph</span></strong></span></span></span></span></strong><strong><span><span><span><span><strong><span>，將graph拉到</span><em>bubbleRob</em><span>底下</span></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><span>開啟graph properties，將<span>Display XYZ-planes</span><span>選項取消打勾</span></span></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><span><span><img alt="" height="652" src="/images/36-1.png" width="380"/></span></span></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><span>並設定graph的位置再 ( 0，0，0.005 )，接著<span style="color: #ff0000;">Add new data stream to record</span><span>，視窗上方</span><span>(Data stream type)</span><span>選擇</span><span style="color: #ff0000;">Object: absolute x-position</span><span>下方</span><span>(Object / item to record)</span><span>選擇</span><span style="color: #ff0000;">bubbleRob_graph</span><span>，</span><span>在</span><span>Data stream recording list</span><span>會出現剛剛新增的設定，Y軸跟Z軸也用同樣方式做設定。</span></span></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><span><span><img alt="" height="211" src="/images/34.png" width="382"/></span></span></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><span><span>為了能夠測量機器人跟環境之間的最小距離再新增一個設定上面選擇<span style="color: #ff0000;">Distance:segment length</span><span>下方選擇</span><span style="color: #ff0000;">bubbleRob_distance</span><span>。</span></span></span></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><span><span><span><img alt="" height="211" src="/images/35.png" width="382"/></span></span></span></strong></span></span></span></span></strong></p>
+<p><strong><span><span><span><span><strong><span><span><span>將XYZ軸及距離設定分別命名為<span style="color: #ff0000;">bubbleRob_x_pos、bubbleRob_y_pos、bubbleRob_z_pos、 bubbleRob_obstacle_dist。</span></span></span></span></strong></span></span></span></span></strong></p>
+<p><img alt="" height="652" src="/images/37-1.png" width="380"/></p>
+<p><span>選擇bubbleRob_xpos在底下的</span><span style="color: #ff0000;"><strong>Time graph properties</strong></span><span>將<span style="color: #ff0000;">Visible</span>取消掉，其他兩軸也用相同方式操作。</span></p>
+<p><span><img alt="" height="652" src="/images/37-2.png" width="380"/></span></p>
+<p>10. <span>點<span style="color: #ff0000;"> </span><strong><span style="color: #ff0000;">Edit 3D curves</span></strong></span></p>
+<p><span><strong><span style="color: #ff0000;"><img alt="" height="652" src="/images/37-3.png" width="380"/></span></strong></span></p>
+<p><span><strong>再點</strong> <strong>Add new curve</strong>，在</span><span>對話框哩，如下圖設定 : </span></p>
+<p><span><span><span></span></span></span></p>
+<p><span><span><span><img alt="" height="153" src="/images/38.png" width="283"/></span></span></span></p>
 <p><span><span><span>點選下面的<strong><span> </span>Relative to world</strong><span> 並</span>設定<span> </span><strong>Curve width</strong><span> </span>為 4</span></span></span></p>
-<p><span><span><span>11.  <strong>[Menu bar --&gt; Add --&gt; Vision sensor --&gt; Perspective type] </strong><span>打開  </span><strong>vision sensor<span> </span></strong><span>，將</span><span>position and orientation 設置為 (0,0,0)，將 <strong>Far clipping plane </strong>設為1，<strong>Resolution X / Y </strong>設為 256 / 256 ，再來選擇 <strong>Show filter dialog</strong><span>，點  </span><strong>Edge detection on work image 再來</strong><span>點 </span><strong>Add filter </strong><span>來新增，並按旁邊向上的箭頭使它到中間，然後雙擊改 </span><strong>Threshold = 0.2</strong></span></span></span></span></p>
-<p><span><span><span><span><img alt="" height="546" src="/images/256.png" width="396"/></span></span></span></span></p>
-<p><span><span><span><span>12. 在<strong> </strong><span><strong>scene</strong><span> </span>上 右鍵<span> </span><strong>add floating view</strong><span> </span>，然後在浮動視窗上面 選 view &gt; Associate view with selected vision sensor<span> ，並小腳本圖標，複製以下代碼貼到腳本</span></span></span></span></span></span></p>
+<p><span><span><span><img alt="" height="329" src="/images/39-1.png" width="380"/></span></span></span></p>
+<p><span><span><span>11.建立cylinder</span></span></span></p>
+<p><span><span><span>增加數個<span style="color: #ff0000;">(0.1,0.1,0.2)</span>的cylinder包圍bubbleRob，將cylinder的特殊屬性參數全部打開，移動cylinder途中按著shift可以進行更細微的移動，按住ctrl則可以讓物件可以在正交方向移動。</span></span></span></p>
+<p><span><span><span>12.model設定</span></span></span></p>
+<p><span><span><span>選擇bubbleRob後在<span><strong>object common properties</strong></span><span>內將</span><span><strong>Object is model base</strong></span><span>和</span><span><strong>Object/model can transfer or accept DNA</strong></span><span>都打勾，這樣bubbleRob邊界框就包含底下所有的物件在內了。</span></span></span></span></p>
+<p><span><span><span><span><img alt="" height="618" src="/images/40-1.png" width="380"/></span></span></span></span></p>
+<p><span><span><span><span>13.將兩個joint、sensor跟graph都選起來然後將參數設定<span style="color: #ff0000;"><strong>ignored by model bounding box</strong></span><span>，讓模型的邊界框略過sensor跟joint然後將joint跟sensor的camera visibility layer 2取消打勾改為打勾10，這樣在畫面上就不會看見軸跟sensor範圍了，最後將感測器、兩個輪子、支點、圖表的</span><span style="color: #ff0000;"><strong>Select base of model instead</strong></span><span>都打勾，這項設定讓我們只能一次移動整個機器人而不是單個零件，能避免定位好的零件被移動。</span></span></span></span></span></p>
+<p><span><span><span><span><span><img alt="" height="215" src="/images/3.6.1.png" width="382"/></span></span></span></span></span></p>
+<p><span><span><span>14.  <span>增加一個新的感測器</span></span></span></span></p>
+<p><span><span><span><span><img alt="" height="729" src="/images/41.png" width="1483"/></span></span></span></span></p>
+<p><span><span><span><span>打開  </span><strong>vision sensor<span> </span></strong><span>，位置、角度跟BubbleRob's proximity sensor同樣</span></span></span></span></p>
+<p><span><span><span>將 <strong>Far clipping plane </strong>設為<span color="#ff0000" style="color: #ff0000;">1</span>，<strong>Resolution X / Y </strong>設為<span style="color: #ff0000;"> 256 / 256 </span></span></span></span></p>
+<p><span><span><span><span><img alt="" height="549" src="/images/42-1.png" width="380"/></span></span></span></span></p>
+<p><span><span><span><span>再來選擇<span style="color: #ff0000;"> <strong>Show filter dialog</strong></span><span>，點  </span><strong><span style="color: #ff0000;">Edge detection on work image</span> 再來點 Add filter 來新增</strong></span></span></span></span></p>
+<p><span><span><span><span><strong><img alt="" height="375" src="/images/43-1.png" width="380"/></strong></span></span></span></span></p>
+<p><span><span><span><span><strong><span>並按旁邊向上的箭頭使它到中間</span></strong></span></span></span></span></p>
+<p><span><span><span><span><strong><span><img alt="" height="375" src="/images/45-1.png" width="380"/></span></strong></span></span></span></span></p>
+<p><span><span><span><span><strong><span>然後雙擊改 </span><strong>Threshold = 0.2</strong></strong></span></span></span></span></p>
+<p><span><span><span><span><strong><strong><img alt="" height="375" src="/images/44.png" width="380"/></strong></strong></span></span></span></span></p>
+<p><span><span><span><span><strong><strong>放到proximity sensor底下</strong></strong></span></span></span></span></p>
+<p><span><span><span><span><strong><strong><img alt="" height="303" src="/images/46.png" width="295"/></strong></strong></span></span></span></span></p>
+<p>15. 在<strong> </strong><span><strong>scene</strong><span> </span>上 右鍵<span> </span><strong>add floating view</strong><span> </span></span></p>
+<p><span><img alt="" height="705" src="/images/47.png" width="1435"/></span></p>
+<p><span>然後在浮動視窗上面 選 view &gt; Associate view with selected vision sensor<span> </span></span></p>
+<p><img alt="" height="275" src="/images/48.png" width="585"/></p>
+<p><img alt="" height="219" src="/images/vision sensor2.png" width="374"/></p>
+<p><span>16.程式:</span><span>位於工具列的script功能可以編輯code</span></p>
+<p><span>最後的步驟要將code放進完成的模型內，選擇bubbleRob點選<span style="color: #ff0000;">(Add-&gt;Associated child script --&gt; Non threaded)</span></span></p>
+<p><span><span><img alt="" height="831" src="/images/49.png" width="1691"/></span></span></p>
+<p>新增一個<span style="color: #ff0000;"><strong>non-threaded child script</strong></span>，接著點選bubbleRob旁邊的圖示(如附圖)<span>就能打開script，將code複製在原本的code後面關掉視窗就完成了。</span></p>
+<p><img alt="" height="62" src="/images/icon2.png" width="198"/></p>
+<p>將程式碼輸入</p>
 <p><span><span><span><span><span><span><img alt="" height="426" src="/images/vrep_NWH4Io47HF.png" width="800"/></span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span><img alt="" height="426" src="/images/vrep_NWH4Io47HF.png" width="800"/></span></span></span></span></span></span></p>
-<h1>個人操作影片</h1>
+<p>注意以下三行名稱是否正確</p>
+<p><img alt="" height="195" src="/images/50-1.png" width="977"/></p><h1>個人操作影片</h1>
 <p>40623119</p>
 <p><span>可攜系統</span></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/P32dakHkfbA" width="560"></iframe></p>
