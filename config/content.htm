@@ -703,6 +703,32 @@ vrep.simxSetJointTargetVelocity(clientID,P2_handle,R_KickBallVel,vrep.simx_opmod
 vrep.simxSetJointTargetVelocity(clientID,R2_handle,0,vrep.simx_opmode_oneshot_wait)
         
 getballposition()</pre>
+<h2>系統功能改善</h2>
+<p>電腦回擊時，會發生延遲的狀況，需要測試求到哪個位置時，桿件能馬上做出擊球的動作</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">while (n == 1):
+        if Bv &lt;= 0 and BBv &lt;= -0.02 and Rv&lt;=0 and RRv &lt;= -0.02:
+            errorCode,position_BR=vrep.simxGetObjectPosition(clientID,B1_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_RR=vrep.simxGetObjectPosition(clientID,B2_handle,-1,vrep.simx_opmode_oneshot)
+            errorCode,position_S=vrep.simxGetObjectPosition(clientID,Sphere_handle,-1,vrep.simx_opmode_oneshot)
+            Bv =position_S[1]- position_BR[1]
+            BBv =position_S[0] - position_BR[0]
+            Rv =position_S[1]- position_RR[1]
+            RRv =position_RR[0]-position_S[0]
+            vrep.simxSetJointTargetVelocity(clientID,R1_handle,B_KickBallVel,vrep.simx_opmode_oneshot_wait)
+            vrep.simxSetJointTargetVelocity(clientID,R2_handle,R_KickBallVel,vrep.simx_opmode_oneshot_wait)</pre>
+<p>原來的程式碼是用球到0.02的位置，後來經過測試後，0.03為最佳</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"> if BBB &lt;-0.03:
+            speed(R1_handle, B_KickBallVel)
+        elif BBB &gt;= -0.03:
+            speed(R1_handle, R_KickBallVel)
+        else:
+            pass
+        if RRR &gt;0.03:
+            speed(R2_handle, R_KickBallVel)
+        elif RRR &lt;= 0.03:
+            speed(R2_handle, B_KickBallVel)
+        else:
+            pass</pre>
 <p></p><h1>結案報告</h1>
 <h2>專案口頭簡報</h2>
 <p>各組利用倉儲中的 Reveal.js 進行結案簡報 (結案口頭簡報)</p>
