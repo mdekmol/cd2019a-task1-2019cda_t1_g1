@@ -79,6 +79,7 @@
 <p></p><h2>系統功能展示</h2>
 <h3>w12 手足球雙人對打測試影片</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/yKlaM3ONPdU" width="560"></iframe></p>
+<p>圖檔:<a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g1/blob/gh-pages/Vrep/football.ttt">football</a></p>
 <p>程式碼</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import vrep
 import keyboard
@@ -148,6 +149,7 @@ while True:
 #vrep.simxSetJointTargetVelocity(clientID,R1_handle,0,vrep.simx_opmode_oneshot_wait)</pre>
 <p></p><h3>w13手足球人對電腦自動回擊測試影片</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/AE9rLeqkIlc" width="560"></iframe></p>
+<p>圖檔:<a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g1/blob/gh-pages/Vrep/football.ttt">football</a></p>
 <p>程式碼</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import vrep
 import keyboard
@@ -220,6 +222,7 @@ def start():
 start()</pre>
 <p></p><h3>w14手足球電腦對打測試影片</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/L2WIItHtdpo" width="560"></iframe></p>
+<p>圖檔:<a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g1/blob/gh-pages/Vrep/football.ttt">football</a></p>
 <p>程式碼</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import vrep
 import keyboard
@@ -285,9 +288,9 @@ def start():
         Mvv = RR*2
         vrep.simxSetJointTargetVelocity(clientID,P1_handle,Mv,vrep.simx_opmode_oneshot_wait)
         vrep.simxSetJointTargetVelocity(clientID,P2_handle,Mvv,vrep.simx_opmode_oneshot_wait)
-start()</pre>
-<h2>手足球初始版本(參考自第三組)</h2><h3>手足球雙人對打</h3>
+start()</pre><h2>手足球初始版本(參考自第三組)</h2><h3>手足球雙人對打</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Czmc5rETVuQ" width="560"></iframe></p>
+<p>圖檔:<a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g1/blob/gh-pages/Vrep/football.ttt">football</a></p>
 <p>程式碼</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import vrep
 import keyboard
@@ -373,6 +376,7 @@ while True:
             break</pre>
 <p></p><h3>手足球單人對電腦</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/aXtKOC15TXI" width="560"></iframe></p>
+<p>圖檔:<a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g1/blob/gh-pages/Vrep/football.ttt">football</a></p>
 <p>程式碼</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import vrep
 import keyboard
@@ -467,6 +471,7 @@ getballposition()
 </pre>
 <p></p><h3>手足球電腦對電腦</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ouVWM-XYCi4" width="560"></iframe></p>
+<p>圖檔:<a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g1/blob/gh-pages/Vrep/football.ttt">football</a></p>
 <p>程式碼</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import vrep
 import keyboard
@@ -704,8 +709,7 @@ vrep.simxSetJointTargetVelocity(clientID,P1_handle,0,vrep.simx_opmode_oneshot_wa
 vrep.simxSetJointTargetVelocity(clientID,P2_handle,R_KickBallVel,vrep.simx_opmode_oneshot_wait)
 vrep.simxSetJointTargetVelocity(clientID,R2_handle,0,vrep.simx_opmode_oneshot_wait)
         
-getballposition()</pre>
-<h2>系統功能改善</h2>
+getballposition()</pre><h2>系統功能改善</h2>
 <p>電腦回擊時，會發生延遲的狀況，需要測試求到哪個位置時，桿件能馬上做出擊球的動作</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">while (n == 1):
         if Bv &lt;= 0 and BBv &lt;= -0.02 and Rv&lt;=0 and RRv &lt;= -0.02:
