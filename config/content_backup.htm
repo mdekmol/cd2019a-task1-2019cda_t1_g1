@@ -799,7 +799,7 @@ vrep.simxSetJointTargetVelocity(clientID,R2_handle,0,vrep.simx_opmode_oneshot_wa
         
 getballposition()</pre>
 <h2>系統功能改善</h2>
-<p>電腦回擊時，會發生延遲的狀況，需要測試求到哪個位置時，桿件能馬上做出擊球的動作</p>
+<p>Q1.電腦回擊時，會發生延遲的狀況，需要測試求到哪個位置時，桿件能馬上做出擊球的動作</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">while (n == 1):
         if Bv &lt;= 0 and BBv &lt;= -0.02 and Rv&lt;=0 and RRv &lt;= -0.02:
             errorCode,position_BR=vrep.simxGetObjectPosition(clientID,B1_handle,-1,vrep.simx_opmode_oneshot)
@@ -824,7 +824,7 @@ getballposition()</pre>
             speed(R2_handle, B_KickBallVel)
         else:
             pass</pre>
-<h2>vrep respondable mask</h2>
+<p>Q2.電腦做回擊時，發生延遲的狀況(尚未解決)</p><h2>vrep respondable mask</h2>
 <p><img alt="" height="447" src="/images/0807007.png" width="284"/></p>
 <p>紅色框框部份上排八個是跟樹狀圖中零件相互碰撞有關，而何謂樹狀圖，如下</p>
 <p><img alt="" height="258" src="/images/9439393.png" width="361"/></p>
