@@ -20,7 +20,7 @@
 <v t="ahshoe.20170322182713.1"><vh>@edit reference.md</vh></v>
 <v t="ahshoe.20170322181453.1"><vh>@edit refer.bib</vh></v>
 <v t="leo.20171119234752.1" a="E"><vh>封面以及摘要</vh>
-<v t="ahshoe.20161120122151.1"><vh>@clean cover_and_abstract.md</vh>
+<v t="ahshoe.20161120122151.1" a="E"><vh>@clean cover_and_abstract.md</vh>
 <v t="ahshoe.20170317115820.1"><vh>摘要</vh></v>
 </v>
 </v>
@@ -80,7 +80,7 @@ chapter_list = " ".join("./paragraph/" + i for i in [
 
 # 若系統並未正確轉檔, 可以將 os.system 改為 g.es 表示要使用 Leo Editor 的 global 物件中的 echo string 將指令印在 log 區
 # 然後複製指令, 然後在命令列視窗中的 markdown 目錄中執行, 就可以得到錯誤訊息
-# 或許可以再從 https://stackoverflow.com/questions/26005583/return-value-of-x-os.system 中的建議改進此一指令
+# 或許可以再從 https://stackoverflow.com/questions/26005583/return-value-of-x-os-system 中的建議改進此一指令
 g.es(os.system("pandoc cover_and_abstract.md " + chapter_list + " reference.md -o ../pdf/report.pdf {}".format(settingFlag)))
 g.es("pandoc cover_and_abstract.md " + chapter_list + " reference.md -o ../pdf/report.pdf {}".format(settingFlag))
 g.es("PDF 轉換完畢")
@@ -241,75 +241,75 @@ abstract: |
 一、球場分析
 球場尺寸依照網頁上的進行設計。
 
-![球場1-1][球場1-1]
+![球場分析1][siteAA]
 
-[球場1-1]: ./images/official-foosball-table-dimensions.jpg {#fig:駱駝 width=50%}
+[siteAA]: ./images/official-foosball-table-dimensions.jpg {#fig:駱駝 }
 
 而球場高度的部分，以模擬時方便看到球移動為優先考量，取適當高度即可。
 
-![球場1-2][球場1-2]
+![球場分析2][siteAB]
 
-[球場1-2]: ./images/chrome_8xxV6ukHaq.png {#fig:駱駝 width=50%}
+[siteAB]: ./images/chrome_8xxV6ukHaq.png {#fig:駱駝 }
 
 場地變更設計:進行模擬程式時，發現到當球滾到場地角落時，足球員將無法再次擊球，因此參考現實中，足球比賽中所謂的角球的概念將場地邊更成四個角落皆為斜坡，如下圖。
 
-![球場1-3][球場1-3]
+![球場分析3][siteAC]
 
-[球場1-3]: ./images/0808080.png {#fig:駱駝 width=50%}
+[siteAC]: ./images/0808080.png {#fig:駱駝 }
 
 二、球員分析
 同樣依照網站上所給隻尺寸進行繪製的動作。
 
-![球員1-1][球員1-1]
+![球員分析1][playerAA]
 
-[球場1-1]: ./images/foosball_player_dimension.jpg {#fig:駱駝 width=50%}
+[playerAA]: ./images/foosball_player_dimension.jpg {#fig:駱駝 }
 
 但由於模擬時，發現球員尺寸會造成兩根桿子平行，球員互相撞擊的部分，因此做了外型上的更改。
 
-![球員1-2][球員1-2]
+![球員分析2][playerAB]
 
-[球員1-2]: ./images/chrome_mnNsNoqCYo.png {#fig:駱駝 width=50%}
+[playerAB]: ./images/chrome_mnNsNoqCYo.png {#fig:駱駝 }
 
 三、桿子分析
 桿子我們設定的長度為80in，由於模擬時可能會發生桿子太短，而晃動的情況發生，所以設計長一點來防止這種情況。
 
-![桿子1-1][桿子1-1]
+![桿子分析][PoleAA]
 
-[桿子1-1]: ./images/chrome_YlMtfyhoy0.png {#fig:駱駝 width=50%}
+[PoleAA]: ./images/chrome_YlMtfyhoy0.png {#fig:駱駝 }
 
 四、軌道分析
 球進球門後，我們製作一個斜坡讓球能夠停一個角落，等待送球機構把球送到另一個軌道；我們是利用斜坡與重力來運送球。
 
-![軌道1-1][軌道1-1]
+![軌道分析1][trackAA]
 
-[軌道1-1]: ./images/chrome_YlMtfyhoy0.png./images/球門.png {#fig:駱駝 width=50%}
+[trackAA]: ./images/chrome_YlMtfyhoy0.png./images/球門.png {#fig:駱駝 }
 
-![軌道1-2][軌道1-2]
+![軌道分析2][trackAB]
 
-[軌道1-2]: ./images/球門側視圖.png {#fig:駱駝 width=50%}
+[trackAB]: ./images/球門側視圖.png {#fig:駱駝 }
 
 在這個轉角處的時候，有時候球會卡住，所以在角落處設計一個擋板，這樣能夠確保球不會卡住在這個角落，利用重力能夠繼續滾動。
 
-![軌道1-3][軌道1-3]
+![軌道分析3][trackAC]
 
-[軌道1-3]: ./images/縫隙.png {#fig:駱駝 width=50%}
+[trackAC]: ./images/縫隙.png {#fig:駱駝 }
 
-![軌道1-4][軌道1-4]
+![軌道分析4][trackAD]
 
-[軌道1-4]: ./images/軌道.png {#fig:駱駝 width=50%}
+[trackAD]: ./images/軌道.png {#fig:駱駝 }
 
 這個孔是將球送回球場，出球孔提高是因為怕球會滾回去而提高的，不會這個孔而影響球的滾動路徑。
 
-![軌道1-5][軌道1-5]
+![軌道分析5][trackAE]
 
-[軌道1-5]: ./images/軌道進球場.png {#fig:駱駝 width=50%}
+[trackAE]: ./images/軌道進球場.png {#fig:駱駝 }
 
 五、成品分析
 目前依照前面所設計的圖形，將所有零件組裝完成。
 
-![成品1-1][成品1-1]
+![成品][productAA]
 
-[成品1-1]: ./images/chrome_8NEqd8EvlG.png {#fig:駱駝 width=50%}
+[productAA]: ./images/chrome_8NEqd8EvlG.png {#fig:駱駝 }
 
 @others
 </t>
@@ -318,51 +318,51 @@ abstract: |
 
 一、球檯
 
-![球檯2-1][球檯2-1]
+![球檯][TableBA]
 
-[球檯2-1]: ./images/球檯.png {#fig:駱駝 width=50%}
+[TableBA]: ./images/球檯.png {#fig:駱駝 }
 
 二、球門與軌道
 
-![球門與軌道2-1][球門與軌道2-1]
+![球門與軌道圖1][goalBA]
 
-[球門與軌道2-1]: ./images/軌道.png {#fig:駱駝 width=50%}
+[goalBA]: ./images/軌道.png {#fig:駱駝 }
 
-![球門與軌道2-2][球門與軌道2-2]
+![球門與軌道2][goalBB]
 
-[球門與軌道2-2]: ./images/球門側視圖.png {#fig:駱駝 width=50%}
+[goalBB]: ./images/球門側視圖.png {#fig:駱駝 }
 
-![球門與軌道2-3][球門與軌道2-3]
+![球門與軌道圖3][goalBC]
 
-[球門與軌道2-3]: ./images/球門.png {#fig:駱駝 width=50%}
+[goalBC]: ./images/球門.png {#fig:駱駝 }
 
-![球門與軌道2-4][球門與軌道2-4]
+![球門與軌道圖4][goalBD]
 
-[球門與軌道2-4]: ./images/縫隙.png {#fig:駱駝 width=50%}
+[goalBD]: ./images/縫隙.png {#fig:駱駝 }
 
 三、球員
 
-![球員2-1][球員2-1]
+![球員圖][playerBA]
 
-[球員2-1]: ./images/球員.png {#fig:駱駝 width=50%}
+[playerBA]: ./images/球員.png {#fig:駱駝 }
 
 四、桿子
 
-![桿子2-1][桿子2-1]
+![桿子圖][PoleBA]
 
-[桿子2-1]: ./images/球桿.png {#fig:駱駝 width=50%}
+[PoleBA]: ./images/球桿.png {#fig:駱駝 }
 
 五、送球機構
 
-![送球機構2-1][送球機構2-1]
+![送球機構圖][GoBA]
 
-[送球機構2-1]: ./images/送球到高處.png {#fig:駱駝 width=50%}
+[GoBA]: ./images/送球到高處.png {#fig:駱駝 }
 
 六、組合
 
-![組合2-1][組合2-1]
+![組合圖][組合combinationBA]
 
-[組合2-1]: ./images/組合件.png {#fig:駱駝 width=50%}
+[combinationBA]: ./images/組合件.png {#fig:駱駝 }
 
 @others
 </t>
@@ -371,20 +371,39 @@ abstract: |
 
 一、工程圖
 1.球場
-./images/球場工程圖.jpg
+
+![球場工程圖][siteCA]
+
+[siteCA]: ./images/球場工程圖.jpg {#fig:駱駝 }
 
 2.桿子
-./images/桿子工程圖.jpg
+
+![桿子工程圖][PoleCA]
+
+[PoleCA]: ./images/桿子工程圖.jpg {#fig:駱駝 }
 
 3.球員
-./images/球員工程圖.jpg
+
+![球員工程圖][playerCA]
+
+[playerCA]: ./images/球員工程圖.jpg {#fig:駱駝 }
 
 4.送球機構支撐架
-./images/送球機構支撐架.jpg
+
+![送球機構支撐架工程圖][SupportCA]
+
+[SupportCA]: ./images/送球機構支撐架.jpg {#fig:駱駝 }
 
 5.大風車
-./images/風車工程圖.jpg
 
+![大風車工程圖][windmillCA]
+
+[windmilltCA]: ./images/風車工程圖.jpg {#fig:駱駝 }
+
+二、爆炸圖
+![爆炸圖][BOM]
+
+[BOM]: ./images/爆炸圖.jpg.jpg {#fig:駱駝 }
 @others
 </t>
 <t tx="leo.20190519181857.1">送球機構設計
@@ -395,9 +414,9 @@ Week 11-12
 
 之後我們分成兩小組去構想送球機構
 
-![丟球回去][丟球回去]
+![丟球回去][throw]
 
-[丟球回去]: ./images/丟球回去.png {#fig:駱駝 width=50%}
+[throw]: ./images/丟球回去.png {#fig:駱駝 }
 
 Week 12-13
 經過第一次的送球機構思考後，我們決定讓進球門的球運送至高處，再以軌道高低差的方式，讓球自然滾入場內，因時間的關係，分成兩小組一起繪製，再決定最終版。
@@ -408,24 +427,24 @@ Week 12-13
 
 送球機構(圓盤)
 
-![圓盤左][圓盤左1]
+![圓盤左][diskL]
 
-[圓盤左1]: ./images/圓盤左.png{#fig:駱駝 width=50%}
+[diskL]: ./images/圓盤左.png{#fig:駱駝 }
 
-![圓盤右][圓盤右]
+![圓盤右][diskR]
 
-[圓盤右]: ./images/場地等角.png {#fig:駱駝 width=50%}
+[diskR]: ./images/場地等角.png {#fig:駱駝 }
 
 
 球檯與軌道(圓盤)
 
-![送球機構(圓盤)][送球機構(圓盤)1]
+![送球機構圓盤][diskALL]
 
-[送球機構(圓盤)1]: ./images/送球機構(圓盤).png {#fig:駱駝 width=50%}
+[diskALL]: ./images/送球機構(圓盤).png {#fig:駱駝 }
 
-![送球機構(圓盤)透明][送球機構(圓盤)透明]
+![送球機構圓盤透明][diskALLB]
 
-[送球機構(圓盤)透明]: ./images/送球機構(圓盤)透明.png {#fig:駱駝 width=50%}
+[diskALLB]: ./images/送球機構(圓盤)透明.png {#fig:駱駝 }
 
 方法二
 
@@ -433,20 +452,20 @@ Week 12-13
 
 送球機構(爪子)
 
-![送球機構(爪子)][送球機構(爪子)1]
+![送球機構爪子][paw]
 
-[送球機構(爪子)1]: ./images/送球到高處.png {#fig:駱駝 width=50%}
+[paw]: ./images/送球到高處.png {#fig:駱駝 }
 
 一開始畫完的軌道，加上上一個小機構一起放入Vrep模擬時，會卡在一個地方就是將球送上去後，滑落到轉角就會卡住，於是我們就在轉角加一塊三角形擋板，讓球會因三角形的斜面而往下走。
 
-![三角形擋板][三角形擋板]
+![三角形擋板][Triangle]
 
-[三角形擋板]: ./images/Inked送球機構角落 _LI.jpg {#fig:駱駝 width=50%}
+[Triangle]: ./images/Inked送球機構角落 _LI.jpg {#fig:駱駝 }
 
 
-![送球機構軌道][送球機構軌道1]
+![送球機構軌道][trackALL]
 
-[送球機構軌道1]: ./images/送球機構加軌道.png {#fig:駱駝 width=50%}
+[trackALL]: ./images/送球機構加軌道.png {#fig:駱駝 }
 
 
 @others
