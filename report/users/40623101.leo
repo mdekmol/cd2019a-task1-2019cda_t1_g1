@@ -19,7 +19,7 @@
 <v t="yen.20170429103940.1" a="E"><vh>@path markdown</vh>
 <v t="ahshoe.20170322182713.1"><vh>@edit reference.md</vh></v>
 <v t="ahshoe.20170322181453.1"><vh>@edit refer.bib</vh></v>
-<v t="leo.20171119234752.1"><vh>封面以及摘要</vh>
+<v t="leo.20171119234752.1" a="E"><vh>封面以及摘要</vh>
 <v t="ahshoe.20161120122151.1"><vh>@clean cover_and_abstract.md</vh>
 <v t="ahshoe.20170317115820.1"><vh>摘要</vh></v>
 </v>
@@ -28,11 +28,14 @@
 <v t="yen.20170429214845.1" a="E"><vh>@path paragraph</vh>
 <v t="leo.20190106201047.1"><vh>@clean introduction.md</vh></v>
 <v t="leo.20190519180750.1" a="E"><vh>@clean tablefootball_design.md</vh>
-<v t="leo.20190519181552.1"><vh>零組件尺寸分析</vh></v>
+<v t="leo.20190519181552.1"><vh>設計構想</vh></v>
+<v t="leo.20190610015707.1"><vh>零組件尺寸分析</vh></v>
 <v t="leo.20190519181710.1"><vh>參數設計與繪圖</vh></v>
 <v t="leo.20190519181713.1"><vh>細部設計與 BOM</vh></v>
 </v>
-<v t="leo.20190519180919.1"><vh>@clean vrep_tablefootball.md</vh></v>
+<v t="leo.20190610014130.1" a="E"><vh>@clean vrep_tablefootball.md</vh>
+<v t="leo.20190610014130.2"><vh>onshape組裝及導入vrep之基本設定</vh></v>
+</v>
 <v t="leo.20190106201247.3" a="E"><vh>@clean vrep_take_ball.md</vh>
 <v t="leo.20190519181857.1"><vh>送球機構設計</vh></v>
 <v t="leo.20190519181902.1"><vh>送球機構模擬</vh></v>
@@ -228,151 +231,18 @@ abstract: |
 
 @others
 </t>
-<t tx="leo.20190519180919.1">手足球系統模擬
-===
-
-
-
-@others
-</t>
-<t tx="leo.20190519181552.1">零組件尺寸分析
+<t tx="leo.20190519181552.1">設計構想
 ---
 
-一、球場分析
+根據本學期課堂內容，進行多人在線協同開發的設計項目。
 
-球場尺寸依照網頁上的進行設計。
+根據老師提供的手足球設計構想，設計手足球機構。採用的兩隊1守門員,2後衛,3中分.4前鋒，的二十人制足球。並且在原有的手足球桌臺上使用代碼控制伺服馬達驅動，取代原來的人人對戰模式，進行人機對戰。
 
-![球場草圖分析][siteAA]
+在設計上首先要進行onshape的球員繪製，為避免較為複雜的3D建模和渲染，採用較為扁平的類似長方形設計，需要繪製二十個相同尺寸和規格的球員模型，接著進行球台的繪製，最後進行足球的繪製，該項過程需要不同組員進行協同設計，目的是較為方便的完成設計變更。
 
-[siteAA]: ./images/official-foosball-table-dimensions.jpg {#fig:駱駝 }
+![設計草圖][design]
 
-而球場高度的部分，以模擬時方便看到球移動為優先考量，取適當高度即可。
-
-![球場分析][siteAB]
-
-[siteAB]: ./images/chrome_8xxV6ukHaq.png {#fig:駱駝 }
-
-
-
-場地變更設計:進行模擬程式時，發現到當球滾到場地角落時，足球員將無法再次擊球，因此參考現實中，足球比賽中所謂的角球的概念將場地邊更成四個角落皆為斜坡，如下圖。
-
-![球場分析角落][siteAC]
-
-[siteAC]: ./images/0808080.png {#fig:駱駝 }
-
-
-二、球員分析
-
-同樣依照網站上所給隻尺寸進行繪製的動作。
-
-![球員分析草圖][playerAA]
-
-[playerAA]: ./images/foosball_player_dimension.jpg {#fig:駱駝 }
-
-但由於模擬時，發現球員尺寸會造成兩根桿子平行，球員互相撞擊的部分，因此做了外型上的更改。
-
-![球員分析][playerAB]
-
-[playerAB]: ./images/chrome_mnNsNoqCYo.png {#fig:駱駝 }
-
-三、桿子分析
-
-桿子我們設定的長度為80in，由於模擬時可能會發生桿子太短，而晃動的情況發生，所以設計長一點來防止這種情況。
-
-![桿子分析][PoleAA]
-
-[PoleAA]: ./images/chrome_YlMtfyhoy0.png {#fig:駱駝 }
-
-四、軌道分析
-
-球進球門後，我們製作一個斜坡讓球能夠停一個角落，等待送球機構把球送到另一個軌道；我們是利用斜坡與重力來運送球。
-
-![軌道分析1][trackAA]
-
-[trackAA]: ./images/球門.png {#fig:駱駝 }
-
-![軌道分析2][trackAB]
-
-[trackAB]: ./images/球門側視圖.png {#fig:駱駝 }
-
-在這個轉角處的時候，有時候球會卡住，所以在角落處設計一個擋板，這樣能夠確保球不會卡住在這個角落，利用重力能夠繼續滾動。
-
-![軌道分析3][trackAC]
-
-[trackAC]: ./images/縫隙.png {#fig:駱駝 }
-
-![軌道分析4][trackAD]
-
-[trackAD]: ./images/軌道.png {#fig:駱駝 }
-
-這個孔是將球送回球場，出球孔提高是因為怕球會滾回去而提高的，不會這個孔而影響球的滾動路徑。
-
-![軌道分析5][trackAE]
-
-[trackAE]: ./images/軌道進球場.png {#fig:駱駝 }
-
-五、成品分析
-
-目前依照前面所設計的圖形，將所有零件組裝完成。
-
-![成品分析][productAA]
-
-[productAA]: ./images/chrome_8NEqd8EvlG.png {#fig:駱駝 }
-
-
-
-
-
-參數設計與繪圖
----
-
-一、球檯
-
-![球檯][TableBA]
-
-[TableBA]: ./images/球檯.png {#fig:駱駝 }
-
-二、球門與軌道
-
-![球門與軌道前視圖][goalBA]
-
-[goalBA]: ./images/軌道.png {#fig:駱駝 }
-
-![球門側視圖][goalBB]
-
-[goalBB]: ./images/球門側視圖.png {#fig:駱駝 }
-
-![球門][goalBC]
-
-[goalBC]: ./images/球門.png {#fig:駱駝 }
-
-![球門與軌道上視圖][goalBD]
-
-[goalBD]: ./images/縫隙.png {#fig:駱駝 }
-
-三、球員
-
-![球員圖][playerBA]
-
-[playerBA]: ./images/球員.png {#fig:駱駝 }
-
-四、桿子
-
-![桿子圖][PoleBA]
-
-[PoleBA]: ./images/球桿.png {#fig:駱駝 }
-
-五、送球機構
-
-![送球機構圖][GoBA]
-
-[GoBA]: ./images/送球到高處.png {#fig:駱駝 }
-
-六、組合
-
-![組合圖][combinationBA]
-
-[combinationBA]: ./images/組合件.png {#fig:駱駝 }
+[design]: ./images/設計草圖.png {#fig:駱駝 }
 
 @others
 </t>
@@ -492,24 +362,213 @@ https://youtu.be/CO5Xx6sN-Kc
 </t>
 <t tx="leo.20190519182839.1">雙人鍵盤控制對打
 ---
+
 https://youtu.be/yKlaM3ONPdU
 
+![雙人鍵盤控制對打][Pfight]
+
+[Pfight]: ./images/雙人對打.jpg {#fig:駱駝 }
 
 @others
 </t>
 <t tx="leo.20190519182841.1">雙電腦對打
 ---
+
 https://youtu.be/L2WIItHtdpo
+
+![雙電腦對打][Cfight]
+
+[Cfight]: ./images/電腦對打.jpg {#fig:駱駝 }
+
 
 https://youtu.be/_fmiNbCI618
 
 第二個網址是加入送球機構的測試
+
+![雙電腦對打送球機構][CfightB]
+
+[CfightB]: ./images/電腦對打送球.jpg {#fig:駱駝 }
+
 @others
 </t>
 <t tx="leo.20190519182843.1">單人鍵盤控制與電腦對打
 ---
+
 https://youtu.be/AE9rLeqkIlc
 
+![單人鍵盤控制與電腦對打][PCfight]
+
+[PCfight]: ./images/與電腦對打.jpg {#fig:駱駝 }
+
+@others
+</t>
+<t tx="leo.20190610014130.1">手足球系統模擬
+===
+
+
+
+
+@others
+</t>
+<t tx="leo.20190610014130.2">onshape組裝及導入vrep之基本設定
+---
+
+
+![球場設定][siteset]
+
+[siteset]: ./images/08.png {#fig:駱駝 }
+
+
+![桿子設定][Poleset]
+
+[Poleset]: ./images/0880.png {#fig:駱駝 }
+
+由上圖所示，兩者皆無碰撞，能順利移動而不受干涉。
+
+
+![足球員設定][siteset]
+
+[siteset]: ./images/08.png {#fig:駱駝  }
+
+由於足球員與球場間無直接接觸，但跟桿子間需無碰撞，所以跟場地勾同樣的形式。
+
+@others
+</t>
+<t tx="leo.20190610015707.1">零組件尺寸分析
+---
+
+一、球場分析
+
+球場尺寸依照網頁上的進行設計。
+
+![球場草圖分析][siteAA]
+
+[siteAA]: ./images/official-foosball-table-dimensions.jpg {#fig:駱駝 }
+
+至於球場高度的部分，先以模擬時方便看得到球移動為優先考量，然後選擇適當的高度即可。
+
+![球場分析][siteAB]
+
+[siteAB]: ./images/chrome_8xxV6ukHaq.png {#fig:駱駝 }
+
+場地變更設計:
+
+進行模擬程式時，發現到當球滾到場地角落時，足球員將無法再次擊球，因此參考現實中，足球比賽中所謂的角球的概念將場地邊更成四個角落皆為斜坡，如下圖2.3。
+
+![球場分析角落][siteAC]
+
+[siteAC]: ./images/0808080.png {#fig:駱駝 }
+
+
+二、球員分析
+
+同樣依照網站上所給隻尺寸進行繪製的動作。
+
+![球員分析草圖][playerAA]
+
+[playerAA]: ./images/foosball_player_dimension.jpg {#fig:駱駝 }
+
+但由於模擬時，發現球員尺寸會造成兩根桿子平行，球員互相撞擊的部分，因此做了外型上的更改。
+
+![球員分析][playerAB]
+
+[playerAB]: ./images/chrome_mnNsNoqCYo.png {#fig:駱駝 }
+
+三、桿子分析
+
+桿子我們設定的長度為80in，由於模擬時可能會發生桿子太短，而晃動的情況發生，所以設計長一點來防止這種情況。
+
+![桿子分析][PoleAA]
+
+[PoleAA]: ./images/chrome_YlMtfyhoy0.png {#fig:駱駝 }
+
+四、軌道分析
+
+球進球門後，我們製作一個斜坡讓球能夠停一個角落，等待送球機構把球送到另一個軌道；我們是利用斜坡與重力來運送球。
+
+![軌道分析1][trackAA]
+
+[trackAA]: ./images/球門.png {#fig:駱駝 }
+
+![軌道分析2][trackAB]
+
+[trackAB]: ./images/球門側視圖.png {#fig:駱駝 }
+
+在這個轉角處的時候，有時候球會卡住，所以在角落處設計一個擋板，這樣能夠確保球不會卡住在這個角落，利用重力能夠繼續滾動。
+
+![軌道分析3][trackAC]
+
+[trackAC]: ./images/縫隙.png {#fig:駱駝 }
+
+![軌道分析4][trackAD]
+
+[trackAD]: ./images/軌道.png {#fig:駱駝 }
+
+這個孔是將球送回球場，出球孔提高是因為怕球會滾回去而提高的，不會這個孔而影響球的滾動路徑。
+
+![軌道分析5][trackAE]
+
+[trackAE]: ./images/軌道進球場.png {#fig:駱駝 }
+
+五、成品分析
+
+目前依照前面所設計的圖形，將所有零件組裝完成。
+
+![成品分析][productAA]
+
+[productAA]: ./images/chrome_8NEqd8EvlG.png {#fig:駱駝 }
+
+---
+參數設計與繪圖
+---
+
+一、球檯
+
+![球檯][TableBA]
+
+[TableBA]: ./images/球檯.png {#fig:駱駝 }
+
+二、球門與軌道
+
+![球門與軌道前視圖][goalBA]
+
+[goalBA]: ./images/軌道.png {#fig:駱駝 }
+
+![球門側視圖][goalBB]
+
+[goalBB]: ./images/球門側視圖.png {#fig:駱駝 }
+
+![球門][goalBC]
+
+[goalBC]: ./images/球門.png {#fig:駱駝 }
+
+![球門與軌道上視圖][goalBD]
+
+[goalBD]: ./images/縫隙.png {#fig:駱駝 }
+
+三、球員
+
+![球員圖][playerBA]
+
+[playerBA]: ./images/球員.png {#fig:駱駝 }
+
+四、桿子
+
+![桿子圖][PoleBA]
+
+[PoleBA]: ./images/球桿.png {#fig:駱駝 }
+
+五、送球機構
+
+![送球機構圖][GoBA]
+
+[GoBA]: ./images/送球到高處.png {#fig:駱駝 }
+
+六、組合
+
+![組合圖][combinationBA]
+
+[combinationBA]: ./images/組合件.png {#fig:駱駝 }
 
 @others
 </t>
