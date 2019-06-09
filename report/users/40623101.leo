@@ -13,14 +13,14 @@
 <v t="ahshoe.20170315212615.1"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="ahshoe.20170315212626.1"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
-<v t="40323230.20170123213451.1"><vh>@button Report pdf</vh></v>
 <v t="yen.20170429132400.1"><vh>協同著作規劃</vh></v>
+<v t="40323230.20170123213451.1"><vh>@button Report pdf</vh></v>
 <v t="yen.20170429103742.1" a="E"><vh>@path ./../</vh>
 <v t="yen.20170429103940.1" a="E"><vh>@path markdown</vh>
 <v t="ahshoe.20170322182713.1"><vh>@edit reference.md</vh></v>
 <v t="ahshoe.20170322181453.1"><vh>@edit refer.bib</vh></v>
-<v t="leo.20171119234752.1" a="E"><vh>封面以及摘要</vh>
-<v t="ahshoe.20161120122151.1" a="E"><vh>@clean cover_and_abstract.md</vh>
+<v t="leo.20171119234752.1"><vh>封面以及摘要</vh>
+<v t="ahshoe.20161120122151.1"><vh>@clean cover_and_abstract.md</vh>
 <v t="ahshoe.20170317115820.1"><vh>摘要</vh></v>
 </v>
 </v>
@@ -282,7 +282,7 @@ abstract: |
 
 ![軌道分析1][trackAA]
 
-[trackAA]: ./images/chrome_YlMtfyhoy0.png./images/球門.png {#fig:駱駝 }
+[trackAA]: ./images/球門.png {#fig:駱駝 }
 
 ![軌道分析2][trackAB]
 
@@ -403,7 +403,7 @@ abstract: |
 二、爆炸圖
 ![爆炸圖][BOM]
 
-[BOM]: ./images/爆炸圖.jpg.jpg {#fig:駱駝 }
+[BOM]: ./images/爆炸圖.jpg {#fig:駱駝 }
 @others
 </t>
 <t tx="leo.20190519181857.1">送球機構設計
@@ -429,7 +429,7 @@ Week 12-13
 
 ![圓盤左][diskL]
 
-[diskL]: ./images/圓盤左.png{#fig:駱駝 }
+[diskL]: ./images/圓盤左.png {#fig:駱駝 }
 
 ![圓盤右][diskR]
 
@@ -452,21 +452,20 @@ Week 12-13
 
 送球機構(爪子)
 
-![送球機構爪子][paw]
+![送球機構圖][GoBA]
 
-[paw]: ./images/送球到高處.png {#fig:駱駝 }
+[GoBA]: ./images/送球到高處.png {#fig:駱駝 }
 
 一開始畫完的軌道，加上上一個小機構一起放入Vrep模擬時，會卡在一個地方就是將球送上去後，滑落到轉角就會卡住，於是我們就在轉角加一塊三角形擋板，讓球會因三角形的斜面而往下走。
 
 ![三角形擋板][Triangle]
 
-[Triangle]: ./images/Inked送球機構角落 _LI.jpg {#fig:駱駝 }
+[Triangle]: ./images/Inked送球機構角落LI.jpg {#fig:駱駝 }
 
 
-![送球機構軌道][trackALL]
+![送球機構軌道組合][TrackALL]
 
-[trackALL]: ./images/送球機構加軌道.png {#fig:駱駝 }
-
+[TrackALL]: ./images/送球機構加軌道.png {#fig:駱駝 }
 
 @others
 </t>

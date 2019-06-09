@@ -49,7 +49,7 @@
 
 ![軌道分析1][trackAA]
 
-[trackAA]: ./images/chrome_YlMtfyhoy0.png./images/球門.png {#fig:駱駝 }
+[trackAA]: ./images/球門.png {#fig:駱駝 }
 
 ![軌道分析2][trackAB]
 
@@ -166,4 +166,4 @@
 二、爆炸圖
 ![爆炸圖][BOM]
 
-[BOM]: ./images/爆炸圖.jpg.jpg {#fig:駱駝 }
+[BOM]: ./images/爆炸圖.jpg {#fig:駱駝 }
