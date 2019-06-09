@@ -273,22 +273,31 @@ abstract: |
 </t>
 <t tx="leo.20190519182839.1">雙人鍵盤控制對打
 ---
-
+https://youtu.be/yKlaM3ONPdU
 
 
 @others
 </t>
 <t tx="leo.20190519182841.1">雙電腦對打
 ---
+https://youtu.be/L2WIItHtdpo
 
+https://youtu.be/_fmiNbCI618
+
+第二個網址是加入送球機構的測試
 
 
 @others
 </t>
 <t tx="leo.20190519182843.1">單人鍵盤控制與電腦對打
 ---
+https://youtu.be/AE9rLeqkIlc
 
+人對電腦的程式寫法
 
+![人對電腦程式碼][opencvori]
+
+[opencvori]: ./images/人對電腦程式碼.png {#fig:駱駝}
 
 @others
 </t>

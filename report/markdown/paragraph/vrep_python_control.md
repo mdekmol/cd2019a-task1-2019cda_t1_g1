@@ -10,6 +10,11 @@ https://youtu.be/yKlaM3ONPdU
 ---
 https://youtu.be/AE9rLeqkIlc
 
+人對電腦的程式寫法
+
+![人對電腦程式碼][opencvori]
+
+[opencvori]: ./images/人對電腦程式碼.png {#fig:駱駝}
 
 雙電腦對打
 ---
@@ -18,3 +23,5 @@ https://youtu.be/L2WIItHtdpo
 https://youtu.be/_fmiNbCI618
 
 第二個網址是加入送球機構的測試
+
+
