@@ -284,6 +284,7 @@ https://youtu.be/L2WIItHtdpo
 
 https://youtu.be/_fmiNbCI618
 
+第二個網址是加入送球機構的測試
 @others
 </t>
 <t tx="leo.20190519182843.1">單人鍵盤控制與電腦對打
