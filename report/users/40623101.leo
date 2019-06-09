@@ -239,38 +239,44 @@ abstract: |
 ---
 
 一、球場分析
+
 球場尺寸依照網頁上的進行設計。
 
-![球場分析1][siteAA]
+![球場草圖分析][siteAA]
 
 [siteAA]: ./images/official-foosball-table-dimensions.jpg {#fig:駱駝 }
 
 而球場高度的部分，以模擬時方便看到球移動為優先考量，取適當高度即可。
 
-![球場分析2][siteAB]
+![球場分析][siteAB]
 
 [siteAB]: ./images/chrome_8xxV6ukHaq.png {#fig:駱駝 }
 
+
+
 場地變更設計:進行模擬程式時，發現到當球滾到場地角落時，足球員將無法再次擊球，因此參考現實中，足球比賽中所謂的角球的概念將場地邊更成四個角落皆為斜坡，如下圖。
 
-![球場分析3][siteAC]
+![球場分析角落][siteAC]
 
 [siteAC]: ./images/0808080.png {#fig:駱駝 }
 
+
 二、球員分析
+
 同樣依照網站上所給隻尺寸進行繪製的動作。
 
-![球員分析1][playerAA]
+![球員分析草圖][playerAA]
 
 [playerAA]: ./images/foosball_player_dimension.jpg {#fig:駱駝 }
 
 但由於模擬時，發現球員尺寸會造成兩根桿子平行，球員互相撞擊的部分，因此做了外型上的更改。
 
-![球員分析2][playerAB]
+![球員分析][playerAB]
 
 [playerAB]: ./images/chrome_mnNsNoqCYo.png {#fig:駱駝 }
 
 三、桿子分析
+
 桿子我們設定的長度為80in，由於模擬時可能會發生桿子太短，而晃動的情況發生，所以設計長一點來防止這種情況。
 
 ![桿子分析][PoleAA]
@@ -278,6 +284,7 @@ abstract: |
 [PoleAA]: ./images/chrome_YlMtfyhoy0.png {#fig:駱駝 }
 
 四、軌道分析
+
 球進球門後，我們製作一個斜坡讓球能夠停一個角落，等待送球機構把球送到另一個軌道；我們是利用斜坡與重力來運送球。
 
 ![軌道分析1][trackAA]
@@ -305,15 +312,18 @@ abstract: |
 [trackAE]: ./images/軌道進球場.png {#fig:駱駝 }
 
 五、成品分析
+
 目前依照前面所設計的圖形，將所有零件組裝完成。
 
-![成品][productAA]
+![成品分析][productAA]
 
 [productAA]: ./images/chrome_8NEqd8EvlG.png {#fig:駱駝 }
 
-@others
-</t>
-<t tx="leo.20190519181710.1">參數設計與繪圖
+
+
+
+
+參數設計與繪圖
 ---
 
 一、球檯
@@ -324,19 +334,19 @@ abstract: |
 
 二、球門與軌道
 
-![球門與軌道圖1][goalBA]
+![球門與軌道前視圖][goalBA]
 
 [goalBA]: ./images/軌道.png {#fig:駱駝 }
 
-![球門與軌道2][goalBB]
+![球門側視圖][goalBB]
 
 [goalBB]: ./images/球門側視圖.png {#fig:駱駝 }
 
-![球門與軌道圖3][goalBC]
+![球門][goalBC]
 
 [goalBC]: ./images/球門.png {#fig:駱駝 }
 
-![球門與軌道圖4][goalBD]
+![球門與軌道上視圖][goalBD]
 
 [goalBD]: ./images/縫隙.png {#fig:駱駝 }
 
@@ -360,56 +370,57 @@ abstract: |
 
 六、組合
 
-![組合圖][組合combinationBA]
+![組合圖][combinationBA]
 
 [combinationBA]: ./images/組合件.png {#fig:駱駝 }
+
+@others
+</t>
+<t tx="leo.20190519181710.1">參數設計與繪圖
+---
 
 @others
 </t>
 <t tx="leo.20190519181713.1">細部設計與 BOM
 ---
 
-一、工程圖
-1.球場
+
 
 ![球場工程圖][siteCA]
 
 [siteCA]: ./images/球場工程圖.jpg {#fig:駱駝 }
 
-2.桿子
 
 ![桿子工程圖][PoleCA]
 
 [PoleCA]: ./images/桿子工程圖.jpg {#fig:駱駝 }
 
-3.球員
 
 ![球員工程圖][playerCA]
 
 [playerCA]: ./images/球員工程圖.jpg {#fig:駱駝 }
 
-4.送球機構支撐架
 
 ![送球機構支撐架工程圖][SupportCA]
 
 [SupportCA]: ./images/送球機構支撐架.jpg {#fig:駱駝 }
 
-5.大風車
 
-![大風車工程圖][windmillCA]
+![大風車工程圖][windmilltCA]
 
 [windmilltCA]: ./images/風車工程圖.jpg {#fig:駱駝 }
 
-二、爆炸圖
+
 ![爆炸圖][BOM]
 
 [BOM]: ./images/爆炸圖.jpg {#fig:駱駝 }
-@others
-</t>
+
+@others</t>
 <t tx="leo.20190519181857.1">送球機構設計
 ---
 
 Week 11-12
+
 如何將球從球門到中場，經過討論後，想說在進門後直接將球丟回中場去，但這種做法會增加寫程式的困擾，後來就想說改成直接帶回中場，以爪子的方式，將球從球門那裡運送到中場，所以就畫了一組爪子的機構，但最後放置在球門旁時，因為長度不夠，若要再改長度的話，此機構可能就無法運行，再加上運送的過程中，無法保證球不會掉，或是未能想到說要多加東西讓球從爪子上回到球場，所以就放棄了此機構。
 
 之後我們分成兩小組去構想送球機構
@@ -419,6 +430,7 @@ Week 11-12
 [throw]: ./images/丟球回去.png {#fig:駱駝 }
 
 Week 12-13
+
 經過第一次的送球機構思考後，我們決定讓進球門的球運送至高處，再以軌道高低差的方式，讓球自然滾入場內，因時間的關係，分成兩小組一起繪製，再決定最終版。
 
 方法一
@@ -452,9 +464,9 @@ Week 12-13
 
 送球機構(爪子)
 
-![送球機構圖][GoBA]
+![送球機構][pawA]
 
-[GoBA]: ./images/送球到高處.png {#fig:駱駝 }
+[pawA]: ./images/送球到高處.png {#fig:駱駝 }
 
 一開始畫完的軌道，加上上一個小機構一起放入Vrep模擬時，會卡在一個地方就是將球送上去後，滑落到轉角就會卡住，於是我們就在轉角加一塊三角形擋板，讓球會因三角形的斜面而往下走。
 
