@@ -1386,7 +1386,59 @@ getballposition()</pre>
 <h2>40623116-楊子毅</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/9laCJmrPZWk" width="560"></iframe>40623116投影片</p>
 <p><a href="https://mdecadp2018.github.io/site-40623116/reveal/index.html#/">個人投影片</a></p>
-<h2>40623119-歐宗韋</h2>
+<p>期末小考-彈珠台</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/BdyLUUTFoqA" width="560"></iframe>圖檔:<a href="https://cad.onshape.com/documents/89f4b4cb14ab5c916682af8e/w/14a82f44318f4b0675ac6722/e/36957a1b33c3f4e8ea8f9887">onshape</a></p>
+<p>ttt檔:</p>
+<p>程式碼</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import vrep
+import keyboard
+import time
+import sys, math     
+# child threaded script: 
+# 內建使用 port 19997 若要加入其他 port, 在  serve 端程式納入
+#simExtRemoteApiStart(19999)
+  
+vrep.simxFinish(-1)
+
+
+clientID = vrep.simxStart('127.0.0.1', 19997, True, True, 5000, 5)
+KickBallV = 360
+R_KickBallVel = (math.pi/180)*KickBallV
+B_KickBallVel = -(math.pi/180)*KickBallV
+if clientID!= -1:
+    print("Connected to remote server")
+else:
+    print('Connection not successful')
+    sys.exit('Could not connect')
+    
+errorCode,Sphere_handle=vrep.simxGetObjectHandle(clientID,'Sphere',vrep.simx_opmode_oneshot_wait)
+errorCode,P1_handle=vrep.simxGetObjectHandle(clientID,'P1',vrep.simx_opmode_oneshot_wait)
+errorCode,R1_handle=vrep.simxGetObjectHandle(clientID,'R1',vrep.simx_opmode_oneshot_wait)
+errorCode,R2_handle=vrep.simxGetObjectHandle(clientID,'R2',vrep.simx_opmode_oneshot_wait)
+
+
+
+def speed(handle,speed):
+    errorCode = vrep.simxSetJointTargetVelocity(clientID,handle,speed,vrep.simx_opmode_oneshot_wait)
+
+vrep.simxStartSimulation(clientID,vrep.simx_opmode_oneshot_wait)
+while True:
+    try:
+            if keyboard.is_pressed('a'): 
+                speed(R1_handle,R_KickBallVel)
+            else:
+                speed(R1_handle,B_KickBallVel)
+            if keyboard.is_pressed('l'):  
+                speed(R2_handle,B_KickBallVel)
+            else:
+                speed(R2_handle,R_KickBallVel)
+            if keyboard.is_pressed('up'):
+                speed(P1_handle,5)
+            else:
+                speed(P1_handle,-100)
+    except:
+            break</pre>
+<p></p><h2>40623119-歐宗韋</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/xZBrXi8zv5c" width="520"></iframe></p>
 <h2>40623122-蔡柄澤</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/hM6g30L7Mjg" width="520"></iframe></p>
