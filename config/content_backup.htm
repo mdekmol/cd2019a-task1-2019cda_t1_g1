@@ -1449,8 +1449,67 @@ while True:
 <h2>40623108-林郁涵</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/xDfvv_pfGEw" width="560"></iframe></p>
 <h2>40623129-陳威誠</h2>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/pz6Te1y_p5M" width="560"></iframe></p>
-<h2>40623117-楊智傑</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/pz6Te1y_p5M" width="560"></iframe>期末彈珠台導入設定加模擬</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/zdzu-6NSEF8" width="560"></iframe>圖檔:<a href="https://cad.onshape.com/documents/89f4b4cb14ab5c916682af8e/w/14a82f44318f4b0675ac6722/e/36957a1b33c3f4e8ea8f9887">onshape</a></p>
+<p>vrep:彈珠台</p>
+<p>程式:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import vrep
+import keyboard
+import time
+import sys, math     
+# child threaded script: 
+# 內建使用 port 19997 若要加入其他 port, 在  serve 端程式納入
+#simExtRemoteApiStart(19999)
+  
+vrep.simxFinish(-1)
+
+
+clientID = vrep.simxStart('127.0.0.1', 19997, True, True, 5000, 5)
+KickBallV = 360
+R_KickBallVel = (math.pi/180)*KickBallV
+B_KickBallVel = -(math.pi/180)*KickBallV
+if clientID!= -1:
+    print("Connected to remote server")
+else:
+    print('Connection not successful')
+    sys.exit('Could not connect')
+    
+errorCode,Sphere_handle=vrep.simxGetObjectHandle(clientID,'Sphere',vrep.simx_opmode_oneshot_wait)
+errorCode,bbb1_handle=vrep.simxGetObjectHandle(clientID,'bbb1',vrep.simx_opmode_oneshot_wait)
+errorCode,Rt_handle=vrep.simxGetObjectHandle(clientID,'Rt',vrep.simx_opmode_oneshot_wait)
+errorCode,Ra_handle=vrep.simxGetObjectHandle(clientID,'Ra',vrep.simx_opmode_oneshot_wait)
+
+
+vrep.simxSetJointTargetVelocity(clientID,bbb1_handle,0,vrep.simx_opmode_oneshot_wait)
+vrep.simxSetJointTargetVelocity(clientID,Ra_handle,0,vrep.simx_opmode_oneshot_wait)
+vrep.simxSetJointTargetVelocity(clientID,Rt_handle,0,vrep.simx_opmode_oneshot_wait)
+
+
+def con(): 
+      errorCode = vrep.simxSetJointTargetVelocity(clientID,Rt_handle,R_KickBallVel,vrep.simx_opmode_oneshot_wait)
+def clo():
+      errorCode = vrep.simxSetJointTargetVelocity(clientID,Ra_handle,B_KickBallVel,vrep.simx_opmode_oneshot_wait) 
+def up():
+      errorCode = vrep.simxSetJointTargetVelocity(clientID,bbb1_handle,100,vrep.simx_opmode_oneshot_wait) 
+
+vrep.simxStartSimulation(clientID,vrep.simx_opmode_oneshot_wait)
+while True:
+    try:
+            if keyboard.is_pressed('a'): 
+                con()
+            else:
+                vrep.simxSetJointTargetVelocity(clientID,Rt_handle,B_KickBallVel,vrep.simx_opmode_oneshot_wait)
+            if keyboard.is_pressed('l'):  
+                clo()
+            else:
+                vrep.simxSetJointTargetVelocity(clientID,Ra_handle,R_KickBallVel,vrep.simx_opmode_oneshot_wait)
+            if keyboard.is_pressed('up'): 
+                up()
+            else:
+                vrep.simxSetJointTargetVelocity(clientID,bbb1_handle,-50,vrep.simx_opmode_oneshot_wait)
+    except:
+            break</pre>
+<p></p><h2>40623117-楊智傑</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rOvXRPHedXU" width="560"></iframe></p>
 <p><a href="https://mdecadp2018.github.io/site-40623129/reveal/index.html#/">投影片</a></p>
 <h2>40423157-朱明棈</h2>
